@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" itemscope itemtype="https://schema.org/Organization">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Business Solution - Professional web development, design, and consulting services. We help businesses grow with innovative digital solutions.">
+    <meta name="keywords" content="web development, web design, consulting, digital solutions, responsive websites, SEO optimization">
+    <meta name="author" content="Digital Business Solution">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.yourcompany.com">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Digital Business Solution - Professional Digital Solutions & Web Development Services">
+    <meta property="og:description" content="Expert web development, design, and consulting services to help your business thrive online. Mobile-first responsive websites with SEO optimization.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourcompany.com">
+    <meta property="og:image" content="https://www.yourcompany.com/images/og-image.jpg">
+    <meta property="og:site_name" content="Digital Business Solution">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_TW">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Digital Business Solution - Professional Digital Solutions">
+    <meta name="twitter:description" content="Expert web development, design, and consulting services for business growth.">
+    <meta name="twitter:image" content="https://www.yourcompany.com/images/twitter-image.jpg">
+    <meta name="twitter:site" content="@yourcompany">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    
+    <!-- Structured Data (JSON-LD) - Enhanced -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Digital Business Solution",
+        "url": "https://www.yourcompany.com",
+        "logo": "https://www.yourcompany.com/logo.png",
+        "description": "Professional web development, design, and consulting services with SEO optimization",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Main Street",
+            "addressLocality": "Hong Kong",
+            "addressRegion": "",
+            "postalCode": "",
+            "addressCountry": "HK"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+852-5112-1555",
+            "contactType": "customer service",
+            "email": "angusyty175@gmail.com",
+            "areaServed": "US",
+            "availableLanguage": ["English", "Chinese"]
+        },
+        "sameAs": [
+            "https://www.facebook.com/angus.yu.505",
+            "https://wa.me/85251121555"
+        ]
+    }
+    </script>
+    
+    <title>Digital Business Solution - Professional Web Development & Design Services | SEO Optimized</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #667eea;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+        }
+        .language-switcher {
+            margin-right: 15px;
+        }
+        .address-link {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .address-link:hover {
+            color: #667eea !important;
+        }
+        .social-contact-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-contact-link:hover {
+            color: #667eea;
+        }
+        .social-icon {
+            width: 20px;
+            text-align: center;
+            margin-right: 8px;
+        }
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0.75rem 0;
+        }
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: ">";
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Page transition */
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+        }
+        /* Performance optimizations */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+        /* Active nav link */
+        .nav-link.active {
+            color: #667eea !important;
+            font-weight: bold;
+        }
+        /* Form validation styles */
+        .is-invalid {
+            border-color: #dc3545;
+        }
+        .invalid-feedback {
+            display: none;
+            width: 100%;
+            margin-top: 0.25rem;
+            font-size: 0.875em;
+            color: #dc3545;
+        }
+        .is-invalid ~ .invalid-feedback {
+            display: block;
+        }
+        /* Toast notification */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+        .toast {
+            background-color: #fff;
+            border-radius: 0.375rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .toast-success {
+            border-left: 4px solid #198754;
+        }
+        .toast-error {
+            border-left: 4px solid #dc3545;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+    
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+
+    <!-- Toast notifications container -->
+    <div class="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <!-- Logo with proper heading structure -->
+            <a class="navbar-brand" href="/" aria-label="Digital Business Solution - Home" itemprop="url">
+                <i class="fas fa-rocket me-2" aria-hidden="true"></i>
+                <span data-translate="company_name" itemprop="name">Digital Business Solution</span>
+            </a>
+            
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <select id="language-select" class="form-select form-select-sm" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="zh">繁體中文</option>
+                </select>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/" aria-current="page" data-translate="nav_home" data-page="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about" data-translate="nav_about" data-page="about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/services" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav_services">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="/services/web-development" data-translate="nav_web_dev" data-page="web-development">Web Development</a></li>
+                            <li><a class="dropdown-item" href="/services/web-design" data-translate="nav_web_design" data-page="web-design">Web Design</a></li>
+                            <li><a class="dropdown-item" href="/services/consulting" data-translate="nav_consulting" data-page="consulting">Consulting</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/services/all-services" data-translate="nav_all_services" data-page="all-services">All Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/portfolio" data-translate="nav_portfolio" data-page="portfolio">Portfolio</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog" data-translate="nav_blog" data-page="blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" data-translate="nav_contact" data-page="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="container mt-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" data-translate="nav_home" data-page="home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-translate="breadcrumb_current">Professional Digital Solutions</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-shrink-0" role="main">
+        
+        <!-- Home Page -->
+        <div id="home-page" class="page-content active">
+            <!-- Hero Section -->
+            <section class="hero-section text-center">
+                <div class="container">
+                    <h1 class="display-4 fw-bold mb-4" data-translate="hero_title" itemprop="headline">Professional Digital Solutions for Your Business</h1>
+                    <p class="lead mb-4" data-translate="hero_description" itemprop="description">We create stunning, responsive websites and provide expert consulting to help your business grow online.</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="/contact" class="btn btn-light btn-lg" data-translate="hero_button_get_started">Get Started</a>
+                        <a href="/portfolio" class="btn btn-outline-light btn-lg" data-translate="hero_button_view_work">View Our Work</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="py-5" aria-labelledby="features-heading">
+                <div class="container">
+                    <h2 id="features-heading" class="text-center section-title" data-translate="features_title">Why Choose Us</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-laptop-code feature-icon" aria-hidden="true"></i>
+                            <h3 data-translate="feature_dev_title">Expert Development</h3>
+                            <p data-translate="feature_dev_description">Custom web development solutions tailored to your business needs using the latest technologies.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-mobile-alt feature-icon" aria-hidden="true"></i>
+                            <h3 data-translate="feature_design_title">Mobile-First Design</h3>
+                            <p data-translate="feature_design_description">Responsive designs that look great on all devices, ensuring the best user experience.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-chart-line feature-icon" aria-hidden="true"></i>
+                            <h3 data-translate="feature_results_title">Results-Driven</h3>
+                            <p data-translate="feature_results_description">We focus on delivering measurable results that help grow your business and increase conversions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="py-5 bg-light" aria-labelledby="services-heading">
+                <div class="container">
+                    <h2 id="services-heading" class="text-center section-title" data-translate="services_title">Our Services</h2>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <article class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title" data-translate="service_web_dev_title">Web Development</h3>
+                                    <p class="card-text" data-translate="service_web_dev_description">Custom website development using modern frameworks and technologies. We build fast, secure, and scalable web applications.</p>
+                                    <a href="/services/web-development" class="btn btn-primary" data-translate="learn_more">Learn More</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title" data-translate="service_design_title">UI/UX Design</h3>
+                                    <p class="card-text" data-translate="service_design_description">User-centered design that creates intuitive and engaging experiences for your customers across all platforms.</p>
+                                    <a href="/services/web-design" class="btn btn-primary" data-translate="learn_more">Learn More</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="py-5 bg-primary text-white" aria-labelledby="cta-heading">
+                <div class="container text-center">
+                    <h2 id="cta-heading" class="mb-4" data-translate="cta_title">Ready to Start Your Project?</h2>
+                    <p class="lead mb-4" data-translate="cta_description">Contact us today for a free consultation and let's discuss how we can help your business succeed online.</p>
+                    <a href="/contact" class="btn btn-light btn-lg" data-translate="cta_button">Get Free Consultation</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h1 class="text-center mb-5" data-translate="about_title">About Digital Business Solution</h1>
+                            
+                            <div class="mb-5">
+                                <h3 data-translate="about_mission_title">Our Mission</h3>
+                                <p data-translate="about_mission_description">We are dedicated to providing exceptional digital solutions that help businesses thrive in the modern digital landscape. Our team of experts combines technical expertise with creative vision to deliver results that matter.</p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 data-translate="about_values_title">Our Values</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 data-translate="about_quality_title">Quality First</h5>
+                                        <p data-translate="about_quality_description">We never compromise on quality and always strive for excellence in every project.</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 data-translate="about_innovation_title">Innovation</h5>
+                                        <p data-translate="about_innovation_description">We stay at the forefront of technology to provide cutting-edge solutions.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 data-translate="about_team_title">Our Expertise</h3>
+                                <p data-translate="about_team_description">With years of experience in web development, design, and digital consulting, we have helped numerous businesses establish and enhance their online presence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services Pages -->
+        <div id="services-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="text-center mb-5" data-translate="services_main_title">Our Services</h1>
+                    
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-laptop-code feature-icon"></i>
+                                    <h3 data-translate="service_web_dev_title">Web Development</h3>
+                                    <p data-translate="service_web_dev_description">Custom web applications and websites built with modern technologies.</p>
+                                    <a href="/services/web-development" class="btn btn-primary" data-translate="learn_more">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-palette feature-icon"></i>
+                                    <h3 data-translate="service_design_title">Web Design</h3>
+                                    <p data-translate="service_design_description">Beautiful, user-friendly designs that convert visitors into customers.</p>
+                                    <a href="/services/web-design" class="btn btn-primary" data-translate="learn_more">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-chart-line feature-icon"></i>
+                                    <h3 data-translate="nav_consulting">Consulting</h3>
+                                    <p data-translate="service_consulting_description">Strategic advice to help you make the right digital decisions.</p>
+                                    <a href="/services/consulting" class="btn btn-primary" data-translate="learn_more">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Web Development Page -->
+        <div id="web-development-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h1 class="text-center mb-4" data-translate="service_web_dev_title">Web Development</h1>
+                            
+                            <div class="text-center mb-5">
+                                <i class="fas fa-laptop-code feature-icon"></i>
+                            </div>
+                            
+                            <div class="mb-5">
+                                <h3 data-translate="web_dev_custom_title">Custom Web Development</h3>
+                                <p data-translate="web_dev_custom_description">We build bespoke web applications tailored to your specific business requirements using the latest technologies and frameworks.</p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 data-translate="web_dev_technologies_title">Our Technologies</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>HTML5, CSS3, JavaScript</li>
+                                            <li>React, Angular, Vue.js</li>
+                                            <li>Node.js, Express</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>PHP, Laravel</li>
+                                            <li>Python, Django</li>
+                                            <li>Database Design & Optimization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="/contact" class="btn btn-primary btn-lg" data-translate="cta_button">Start Your Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Web Design Page -->
+        <div id="web-design-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h1 class="text-center mb-4" data-translate="service_design_title">Web Design</h1>
+                            
+                            <div class="text-center mb-5">
+                                <i class="fas fa-palette feature-icon"></i>
+                            </div>
+                            
+                            <div class="mb-5">
+                                <h3 data-translate="web_design_ux_title">User Experience Design</h3>
+                                <p data-translate="web_design_ux_description">We create intuitive and engaging user experiences that keep visitors on your site and guide them toward conversion.</p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 data-translate="web_design_responsive_title">Responsive Design</h3>
+                                <p data-translate="web_design_responsive_description">Every website we design is fully responsive, ensuring optimal viewing experience across all devices and screen sizes.</p>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="/contact" class="btn btn-primary btn-lg" data-translate="cta_button">Get a Design Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Consulting Page -->
+        <div id="consulting-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h1 class="text-center mb-4" data-translate="nav_consulting">Consulting Services</h1>
+                            
+                            <div class="text-center mb-5">
+                                <i class="fas fa-chart-line feature-icon"></i>
+                            </div>
+                            
+                            <div class="mb-5">
+                                <h3 data-translate="consulting_strategy_title">Digital Strategy</h3>
+                                <p data-translate="consulting_strategy_description">We help you develop a comprehensive digital strategy that aligns with your business goals and drives growth.</p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 data-translate="consulting_tech_title">Technology Consulting</h3>
+                                <p data-translate="consulting_tech_description">Get expert advice on technology stack selection, architecture design, and implementation strategies.</p>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="/contact" class="btn btn-primary btn-lg" data-translate="cta_button">Schedule Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- All Services Page -->
+        <div id="all-services-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="text-center mb-5" data-translate="nav_all_services">All Services</h1>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 data-translate="service_web_dev_title">Web Development</h5>
+                                    <p>Full-stack web application development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 data-translate="service_design_title">UI/UX Design</h5>
+                                    <p>User interface and experience design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5>E-commerce Solutions</h5>
+                                    <p>Online store development and optimization</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5>SEO Optimization</h5>
+                                    <p>Search engine optimization services</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5>Mobile App Development</h5>
+                                    <p>iOS and Android application development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 data-translate="nav_consulting">Digital Consulting</h5>
+                                    <p>Strategic digital transformation guidance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Portfolio Page -->
+        <div id="portfolio-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="text-center mb-5" data-translate="nav_portfolio">Our Portfolio</h1>
+                    
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5>E-commerce Platform</h5>
+                                    <p>Custom e-commerce solution with advanced features and seamless user experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5>Corporate Website</h5>
+                                    <p>Modern corporate website with responsive design and content management system.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5>Web Application</h5>
+                                    <p>Complex web application with real-time features and scalable architecture.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5>Mobile App</h5>
+                                    <p>Cross-platform mobile application with native performance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Blog Page -->
+        <div id="blog-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h1 class="text-center mb-5" data-translate="nav_blog">Blog & Insights</h1>
+                            
+                            <div class="text-center mb-5">
+                                <p class="lead">Visit our main blog for the latest articles and insights on web development, design, and digital strategy.</p>
+                                <a href="https://angusyu.blogspot.com/" target="_blank" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-external-link-alt me-2"></i>
+                                    Visit Our Blog
+                                </a>
+                            </div>
+
+                            <div class="blog-preview">
+                                <h3>The Future of Web Development in 2024</h3>
+                                <p class="text-muted">Published: January 15, 2024</p>
+                                <p>Exploring the latest trends and technologies shaping the future of web development...</p>
+                            </div>
+
+                            <div class="blog-preview">
+                                <h3>SEO Best Practices for Modern Websites</h3>
+                                <p class="text-muted">Published: December 20, 2023</p>
+                                <p>Essential SEO strategies to improve your website's visibility and ranking...</p>
+                            </div>
+
+                            <div class="blog-preview">
+                                <h3>Mobile-First Design: Why It Matters</h3>
+                                <p class="text-muted">Published: November 10, 2023</p>
+                                <p>Understanding the importance of mobile-first approach in modern web design...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page-content">
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="text-center mb-5" data-translate="nav_contact">Contact Us</h1>
+                    
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 data-translate="footer_contact">Contact Information</h4>
+                                            <address>
+                                                <p><i class="fas fa-map-marker-alt me-2"></i> Central District, Hong Kong</p>
+                                                <p><i class="fas fa-phone me-2"></i> (852) 5112 1555</p>
+                                                <p><i class="fas fa-envelope me-2"></i> angusyty175@gmail.com</p>
+                                                <p>
+                                                    <a href="https://wa.me/85251121555" target="_blank" class="text-decoration-none">
+                                                        <i class="fab fa-whatsapp me-2"></i>
+                                                        WhatsApp: 5112 1555
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    <a href="https://www.facebook.com/angus.yu.505" target="_blank" class="text-decoration-none">
+                                                        <i class="fab fa-facebook me-2"></i>
+                                                        Facebook: angus.yu.505
+                                                    </a>
+                                                </p>
+                                            </address>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4>Send us a Message</h4>
+                                            <form id="contact-form">
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                                    <div class="invalid-feedback">Please provide your name.</div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                                                    <div class="invalid-feedback">Please provide a message.</div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary" id="send-message-btn">
+                                                    <span id="btn-text">Send Message</span>
+                                                    <div id="btn-spinner" class="spinner-border spinner-border-sm d-none" role="status">
+                                                        <span class="visually-hidden">Loading...</span>
+                                                    </div>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-4" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 data-translate="company_name" itemprop="name">Digital Business Solution</h3>
+                    <p data-translate="company_description" itemprop="description">Providing expert digital solutions since 2020. We help businesses establish a strong online presence.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4 data-translate="footer_quick_links">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/about" class="text-light text-decoration-none" data-translate="nav_about">About Us</a></li>
+                        <li><a href="/services" class="text-light text-decoration-none" data-translate="nav_services">Services</a></li>
+                        <li><a href="/portfolio" class="text-light text-decoration-none" data-translate="nav_portfolio">Portfolio</a></li>
+                        <li><a href="/contact" class="text-light text-decoration-none" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4 data-translate="footer_contact">Contact Info</h4>
+                    <address class="text-light" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                        <a href="https://maps.google.com/?q=Central,+Hong+Kong" 
+                           target="_blank" class="text-light text-decoration-none address-link" rel="noopener">
+                            <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>
+                            <span data-translate="company_address" itemprop="streetAddress">Central</span>, 
+                            <span itemprop="addressLocality">Hong Kong</span>, 
+                            <span itemprop="addressRegion"></span> 
+                            <span itemprop="postalCode"></span>
+                        </a><br>
+                        <a href="tel:+852-5112-1555" class="text-light text-decoration-none">
+                            <i class="fas fa-phone me-2" aria-hidden="true"></i>
+                            <span data-translate="company_phone" itemprop="telephone">(852) 5112-1555</span>
+                        </a><br>
+                        <a href="mailto:angusyty175@gmail.com" class="text-light text-decoration-none">
+                            <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                            <span itemprop="email">angusyty175@gmail.com</span>
+                        </a><br>
+                        <a href="https://wa.me/85251121555" target="_blank" class="social-contact-link" rel="noopener">
+                            <i class="fab fa-whatsapp social-icon" aria-hidden="true"></i>
+                            <span>WhatsApp: 5112 1555</span>
+                        </a><br>
+                        <a href="https://www.facebook.com/angus.yu.505" target="_blank" class="social-contact-link" rel="noopener">
+                            <i class="fab fa-facebook social-icon" aria-hidden="true"></i>
+                            <span>Facebook: angus.yu.505</span>
+                        </a>
+                    </address>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 <span data-translate="company_name" itemprop="name">Digital Business Solution</span>. <span data-translate="footer_rights">All rights reserved.</span></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="/privacy" class="text-light text-decoration-none me-3" data-translate="footer_privacy">Privacy Policy</a>
+                    <a href="/terms" class="text-light text-decoration-none" data-translate="footer_terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Language and Page Routing Script -->
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                company_name: "Digital Business Solution",
+                nav_home: "Home",
+                nav_about: "About",
+                nav_services: "Services",
+                nav_web_dev: "Web Development",
+                nav_web_design: "Web Design",
+                nav_consulting: "Consulting",
+                nav_all_services: "All Services",
+                nav_portfolio: "Portfolio",
+                nav_blog: "Blog",
+                nav_contact: "Contact",
+                breadcrumb_current: "Professional Digital Solutions",
+                hero_title: "Professional Digital Solutions for Your Business",
+                hero_description: "We create stunning, responsive websites and provide expert consulting to help your business grow online.",
+                hero_button_get_started: "Get Started",
+                hero_button_view_work: "View Our Work",
+                features_title: "Why Choose Us",
+                feature_dev_title: "Expert Development",
+                feature_dev_description: "Custom web development solutions tailored to your business needs using the latest technologies.",
+                feature_design_title: "Mobile-First Design",
+                feature_design_description: "Responsive designs that look great on all devices, ensuring the best user experience.",
+                feature_results_title: "Results-Driven",
+                feature_results_description: "We focus on delivering measurable results that help grow your business and increase conversions.",
+                services_title: "Our Services",
+                service_web_dev_title: "Web Development",
+                service_web_dev_description: "Custom website development using modern frameworks and technologies. We build fast, secure, and scalable web applications.",
+                service_design_title: "UI/UX Design",
+                service_design_description: "User-centered design that creates intuitive and engaging experiences for your customers across all platforms.",
+                learn_more: "Learn More",
+                cta_title: "Ready to Start Your Project?",
+                cta_description: "Contact us today for a free consultation and let's discuss how we can help your business succeed online.",
+                cta_button: "Get Free Consultation",
+                company_description: "Providing expert digital solutions since 2020. We help businesses establish a strong online presence.",
+                footer_quick_links: "Quick Links",
+                footer_contact: "Contact Info",
+                company_address: "Central District",
+                company_phone: "(852) 5112-1555",
+                footer_rights: "All rights reserved.",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Service",
+                // New translations for additional pages
+                about_title: "About Digital Business Solution",
+                about_mission_title: "Our Mission",
+                about_mission_description: "We are dedicated to providing exceptional digital solutions that help businesses thrive in the modern digital landscape.",
+                about_values_title: "Our Values",
+                about_quality_title: "Quality First",
+                about_quality_description: "We never compromise on quality and always strive for excellence in every project.",
+                about_innovation_title: "Innovation",
+                about_innovation_description: "We stay at the forefront of technology to provide cutting-edge solutions.",
+                about_team_title: "Our Expertise",
+                about_team_description: "With years of experience in web development, design, and digital consulting.",
+                services_main_title: "Our Services",
+                web_dev_custom_title: "Custom Web Development",
+                web_dev_custom_description: "We build bespoke web applications tailored to your specific business requirements.",
+                web_dev_technologies_title: "Our Technologies",
+                web_design_ux_title: "User Experience Design",
+                web_design_ux_description: "We create intuitive and engaging user experiences that keep visitors on your site.",
+                web_design_responsive_title: "Responsive Design",
+                web_design_responsive_description: "Every website we design is fully responsive across all devices.",
+                consulting_strategy_title: "Digital Strategy",
+                consulting_strategy_description: "We help you develop a comprehensive digital strategy that drives growth.",
+                consulting_tech_title: "Technology Consulting",
+                consulting_tech_description: "Get expert advice on technology stack selection and implementation.",
+                service_consulting_description: "Strategic advice to help you make the right digital decisions."
+            },
+            zh: {
+                company_name: "數碼商業解決方案",
+                nav_home: "首頁",
+                nav_about: "關於我們",
+                nav_services: "服務項目",
+                nav_web_dev: "網站開發",
+                nav_web_design: "網頁設計",
+                nav_consulting: "諮詢服務",
+                nav_all_services: "所有服務",
+                nav_portfolio: "作品集",
+                nav_blog: "部落格",
+                nav_contact: "聯絡我們",
+                breadcrumb_current: "專業數位解決方案",
+                hero_title: "為您的企業提供專業數位解決方案",
+                hero_description: "我們創建令人驚艷的響應式網站，並提供專家諮詢服務，幫助您的企業在線上成長。",
+                hero_button_get_started: "開始使用",
+                hero_button_view_work: "查看作品",
+                features_title: "為何選擇我們",
+                feature_dev_title: "專業開發",
+                feature_dev_description: "使用最新技術，為您的業務需求量身定制網站開發解決方案。",
+                feature_design_title: "行動優先設計",
+                feature_design_description: "響應式設計在所有設備上都能完美呈現，確保最佳用戶體驗。",
+                feature_results_title: "結果導向",
+                feature_results_description: "我們專注於提供可衡量的結果，幫助您的業務成長並提高轉換率。",
+                services_title: "我們的服務",
+                service_web_dev_title: "網站開發",
+                service_web_dev_description: "使用現代框架和技術進行自定義網站開發。我們構建快速、安全且可擴展的Web應用程序。",
+                service_design_title: "UI/UX設計",
+                service_design_description: "以用戶為中心的設計，為您的客戶在所有平台上創造直觀且引人入勝的體驗。",
+                learn_more: "了解更多",
+                cta_title: "準備開始您的專案了嗎？",
+                cta_description: "立即聯繫我們進行免費諮詢，讓我們討論如何幫助您的企業在線上取得成功。",
+                cta_button: "獲取免費諮詢",
+                company_description: "自2020年以來提供專業數位解決方案。我們幫助企業建立強大的線上形象。",
+                footer_quick_links: "快速連結",
+                footer_contact: "聯絡資訊",
+                company_address: "香港中環",
+                company_phone: "(852) 5112-1555",
+                footer_rights: "保留所有權利。",
+                footer_privacy: "隱私政策",
+                footer_terms: "服務條款",
+                // New translations for additional pages
+                about_title: "關於數碼商業解決方案",
+                about_mission_title: "我們的使命",
+                about_mission_description: "我們致力於提供卓越的數字解決方案，幫助企業在現代數字環境中蓬勃發展。",
+                about_values_title: "我們的價值觀",
+                about_quality_title: "質量第一",
+                about_quality_description: "我們從不犧牲質量，始終在每個項目中追求卓越。",
+                about_innovation_title: "創新",
+                about_innovation_description: "我們站在技術前沿，提供尖端解決方案。",
+                about_team_title: "我們的專業知識",
+                about_team_description: "憑藉在網站開發、設計和數字諮詢方面的多年經驗。",
+                services_main_title: "我們的服務",
+                web_dev_custom_title: "定制網站開發",
+                web_dev_custom_description: "我們根據您的具體業務需求構建定制的Web應用程序。",
+                web_dev_technologies_title: "我們的技術",
+                web_design_ux_title: "用戶體驗設計",
+                web_design_ux_description: "我們創建直觀且引人入勝的用戶體驗，讓訪問者留在您的網站上。",
+                web_design_responsive_title: "響應式設計",
+                web_design_responsive_description: "我們設計的每個網站都是完全響應式的，適用於所有設備。",
+                consulting_strategy_title: "數字戰略",
+                consulting_strategy_description: "我們幫助您制定全面的數字戰略，推動增長。",
+                consulting_tech_title: "技術諮詢",
+                consulting_tech_description: "獲得有關技術堆棧選擇和實施的專家建議。",
+                service_consulting_description: "戰略建議，幫助您做出正確的數字決策。"
+            }
+        };
+
+        // Email sending functionality
+        function sendEmail(name, email, message) {
+            // Using EmailJS service to send emails
+            // You'll need to set up an account at https://www.emailjs.com/
+            // and replace these values with your own
+            const serviceID = 'your_service_id';
+            const templateID = 'your_template_id';
+            const publicKey = 'your_public_key';
+            
+            // Create email parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: 'angusyty175@gmail.com'
+            };
+            
+            // Send email using EmailJS
+            return emailjs.send(serviceID, templateID, templateParams, publicKey);
+        }
+
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            const toastContainer = document.querySelector('.toast-container');
+            const toastId = 'toast-' + Date.now();
+            
+            const toastHTML = `
+                <div id="${toastId}" class="toast ${type === 'success' ? 'toast-success' : 'toast-error'}" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="fas ${type === 'success' ? 'fa-check-circle text-success' : 'fa-exclamation-circle text-danger'} me-2"></i>
+                        <strong class="me-auto">${type === 'success' ? 'Success' : 'Error'}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                </div>
+            `;
+            
+            toastContainer.innerHTML += toastHTML;
+            
+            const toastElement = document.getElementById(toastId);
+            const toast = new bootstrap.Toast(toastElement, { delay: 5000 });
+            toast.show();
+            
+            // Remove toast from DOM after it's hidden
+            toastElement.addEventListener('hidden.bs.toast', function() {
+                toastElement.remove();
+            });
+        }
+
+        // Form validation
+        function validateForm(formData) {
+            const errors = [];
+            
+            if (!formData.name.trim()) {
+                errors.push('Name is required');
+            }
+            
+            if (!formData.email.trim()) {
+                errors.push('Email is required');
+            } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+                errors.push('Email is invalid');
+            }
+            
+            if (!formData.message.trim()) {
+                errors.push('Message is required');
+            }
+            
+            return errors;
+        }
+
+        // Page routing functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize language
+            const languageSelect = document.getElementById('language-select');
+            const savedLanguage = localStorage.getItem('preferred-language') || 'en';
+            languageSelect.value = savedLanguage;
+            updatePageLanguage(savedLanguage);
+
+            // Language switcher event
+            languageSelect.addEventListener('change', function() {
+                const selectedLanguage = this.value;
+                localStorage.setItem('preferred-language', selectedLanguage);
+                updatePageLanguage(selectedLanguage);
+            });
+
+            // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        message: document.getElementById('message').value
+                    };
+                    
+                    // Validate form
+                    const errors = validateForm(formData);
+                    
+                    if (errors.length > 0) {
+                        // Show validation errors
+                        errors.forEach(error => {
+                            showToast(error, 'error');
+                        });
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const sendButton = document.getElementById('send-message-btn');
+                    const btnText = document.getElementById('btn-text');
+                    const btnSpinner = document.getElementById('btn-spinner');
+                    
+                    btnText.textContent = 'Sending...';
+                    btnSpinner.classList.remove('d-none');
+                    sendButton.disabled = true;
+                    
+                    // Send email
+                    sendEmail(formData.name, formData.email, formData.message)
+                        .then(() => {
+                            // Success
+                            showToast('Your message has been sent successfully!', 'success');
+                            contactForm.reset();
+                            
+                            // Reset button state
+                            btnText.textContent = 'Send Message';
+                            btnSpinner.classList.add('d-none');
+                            sendButton.disabled = false;
+                        })
+                        .catch((error) => {
+                            // Error
+                            console.error('Email sending failed:', error);
+                            showToast('Failed to send message. Please try again later.', 'error');
+                            
+                            // Reset button state
+                            btnText.textContent = 'Send Message';
+                            btnSpinner.classList.add('d-none');
+                            sendButton.disabled = false;
+                        });
+                });
+            }
+
+            // Navigation click handlers
+            function attachNavigationHandlers() {
+                document.querySelectorAll('a[href^="/"]').forEach(link => {
+                    // Remove existing listeners to avoid duplicates
+                    link.removeEventListener('click', navigationClickHandler);
+                    link.addEventListener('click', navigationClickHandler);
+                });
+            }
+
+            function navigationClickHandler(e) {
+                e.preventDefault();
+                const path = this.getAttribute('href');
+                showPage(path);
+                
+                // Update active nav link (only for main navigation)
+                if (this.classList.contains('nav-link')) {
+                    document.querySelectorAll('.nav-link').forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            }
+
+            // Initial attachment of handlers
+            attachNavigationHandlers();
+
+            // Show specific page
+            function showPage(path) {
+                // Hide all pages
+                document.querySelectorAll('.page-content').forEach(page => {
+                    page.classList.remove('active');
+                });
+
+                // Map paths to page IDs
+                const pageMap = {
+                    '/': 'home-page',
+                    '/about': 'about-page',
+                    '/services': 'services-page',
+                    '/services/web-development': 'web-development-page',
+                    '/services/web-design': 'web-design-page',
+                    '/services/consulting': 'consulting-page',
+                    '/services/all-services': 'all-services-page',
+                    '/portfolio': 'portfolio-page',
+                    '/blog': 'blog-page',
+                    '/contact': 'contact-page'
+                };
+
+                const pageId = pageMap[path] || 'home-page';
+                document.getElementById(pageId).classList.add('active');
+
+                // Update breadcrumb
+                updateBreadcrumb(path);
+                
+                // Update page title
+                updatePageTitle(path);
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+
+            // Update breadcrumb
+            function updateBreadcrumb(path) {
+                const breadcrumb = document.querySelector('.breadcrumb');
+                const pathNames = {
+                    '/about': 'About Us',
+                    '/services': 'Services',
+                    '/services/web-development': 'Web Development',
+                    '/services/web-design': 'Web Design',
+                    '/services/consulting': 'Consulting',
+                    '/services/all-services': 'All Services',
+                    '/portfolio': 'Portfolio',
+                    '/blog': 'Blog',
+                    '/contact': 'Contact'
+                };
+
+                let breadcrumbHTML = `
+                    <li class="breadcrumb-item"><a href="/" data-translate="nav_home" data-page="home">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">${pathNames[path] || 'Professional Digital Solutions'}</li>
+                `;
+                
+                breadcrumb.innerHTML = breadcrumbHTML;
+                
+                // Reattach event handlers to the new breadcrumb links
+                attachNavigationHandlers();
+                
+                // Update translations for breadcrumb
+                updatePageLanguage(languageSelect.value);
+            }
+
+            // Update page title
+            function updatePageTitle(path) {
+                const titles = {
+                    '/about': 'About Us - Digital Business Solution',
+                    '/services': 'Our Services - Digital Business Solution',
+                    '/services/web-development': 'Web Development Services - Digital Business Solution',
+                    '/services/web-design': 'Web Design Services - Digital Business Solution',
+                    '/services/consulting': 'Consulting Services - Digital Business Solution',
+                    '/services/all-services': 'All Services - Digital Business Solution',
+                    '/portfolio': 'Portfolio - Digital Business Solution',
+                    '/blog': 'Blog - Digital Business Solution',
+                    '/contact': 'Contact Us - Digital Business Solution'
+                };
+                
+                document.title = titles[path] || 'Digital Business Solution - Professional Web Development & Design Services';
+            }
+
+            // Function to update page content based on selected language
+            function updatePageLanguage(language) {
+                const elements = document.querySelectorAll('[data-translate]');
+                
+                elements.forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[language] && translations[language][key]) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = translations[language][key];
+                        } else {
+                            element.textContent = translations[language][key];
+                        }
+                    }
+                });
+                
+                // Update HTML lang attribute for accessibility
+                document.documentElement.lang = language;
+            }
+
+            // Initialize with home page
+            showPage('/');
+
+            // Lazy loading for images
+            const lazyImages = document.querySelectorAll('img.lazy-load');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => imageObserver.observe(img));
+        });
+    </script>
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with your public key
+        // Replace 'your_public_key' with your actual EmailJS public key
+        emailjs.init('your_public_key');
+    </script>
+</body>
+</html>

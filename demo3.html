@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香港室內設計 | Hong Kong Interior Design - 專業室內設計服務</title>
+    <meta name="description" content="香港專業室內設計公司，提供住宅、商業空間設計服務。融合現代美學與實用功能，打造理想生活空間。">
+    <meta name="keywords" content="室內設計, interior design, 香港室內設計, 裝修設計, 空間設計, 家居設計">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        :root {
+            --primary: #D4AF37; /* Gold accent */
+            --secondary: #8B0000; /* Deep red */
+            --light: #f8f9fa;
+            --dark: #2c2c2c;
+            --accent: #e9c46a;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        /* Language Selector */
+        .lang-selector {
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary);
+        }
+
+        .lang-btn i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+
+        .lang-selector.active .lang-btn i {
+            transform: rotate(180deg);
+        }
+
+        .lang-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 120px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1001;
+        }
+
+        .lang-options a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .lang-options a:hover {
+            background-color: #f5f5f5;
+        }
+
+        .lang-selector.active .lang-options {
+            display: block;
+        }
+
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .desktop-nav ul li {
+            margin-left: 25px;
+        }
+
+        .desktop-nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        .desktop-nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 20px 0;
+        }
+
+        .mobile-nav ul li {
+            margin: 0;
+        }
+
+        .mobile-nav ul li a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .mobile-nav ul li a:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1549517045-bc93de075e53?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #b8941f;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .section-title p {
+            color: #777;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 80px 0;
+            background-color: #f5f5f5;
+        }
+
+        .portfolio-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-btn {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .portfolio-btn.active, .portfolio-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 300px;
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(212, 175, 55, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .products-search {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            width: 300px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+
+        .category-filter {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .zoom-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.8);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .product-image:hover .zoom-icon {
+            opacity: 1;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .view-details {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .view-details:hover {
+            background-color: #6a0000;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1100;
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .modal-image-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .modal-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 15px;
+        }
+
+        .nav-btn {
+            background: rgba(255,255,255,0.8);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 18px;
+            color: var(--dark);
+        }
+
+        .nav-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .image-counter {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .modal-description {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: #f5f5f5;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            width: 70%;
+            margin-right: 5px;
+        }
+
+        .newsletter button {
+            padding: 10px 15px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .products-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .lang-selector {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+            
+            .nav-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-nav {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .services-grid,
+            .portfolio-grid,
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .portfolio-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-section">
+                <a href="#" class="logo">
+                    <i class="fas fa-home"></i>
+                    香港<span>室內設計</span>
+                </a>
+                <div class="lang-selector">
+                    <button class="lang-btn">繁體中文 <i class="fas fa-chevron-down"></i></button>
+                    <div class="lang-options">
+                        <a href="#" data-lang="zh-HK">繁體中文</a>
+                        <a href="#" data-lang="zh-CN">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#home" data-key="home">首頁</a></li>
+                    <li><a href="#services" data-key="services">服務項目</a></li>
+                    <li><a href="#portfolio" data-key="portfolio">設計案例</a></li>
+                    <li><a href="#products" data-key="products">精選產品</a></li>
+                    <li><a href="#about" data-key="about">關於我們</a></li>
+                    <li><a href="#contact" data-key="contact">聯絡我們</a></li>
+                </ul>
+            </nav>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home" data-key="home">首頁</a></li>
+                    <li><a href="#services" data-key="services">服務項目</a></li>
+                    <li><a href="#portfolio" data-key="portfolio">設計案例</a></li>
+                    <li><a href="#products" data-key="products">精選產品</a></li>
+                    <li><a href="#about" data-key="about">關於我們</a></li>
+                    <li><a href="#contact" data-key="contact">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 data-key="hero-title">打造理想生活空間</h1>
+            <p data-key="hero-desc">香港專業室內設計團隊，融合現代美學與實用功能，為您創造獨一無二的居住體驗</p>
+            <a href="#contact" class="btn" data-key="consult-btn">免費諮詢</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-key="services-title">我們的服務</h2>
+                <p data-key="services-desc">專業室內設計服務，滿足您的各種空間需求</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3 data-key="service1-title">住宅設計</h3>
+                    <p data-key="service1-desc">專業住宅空間規劃，打造舒適宜居的家居環境</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3 data-key="service2-title">商業空間設計</h3>
+                    <p data-key="service2-desc">辦公室、商店等商業空間設計，提升品牌形象與工作效率</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛋️</div>
+                    <h3 data-key="service3-title">軟裝設計</h3>
+                    <p data-key="service3-desc">家具、燈飾、窗簾等軟裝配置，完善空間細節</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📐</div>
+                    <h3 data-key="service4-title">空間規劃</h3>
+                    <p data-key="service4-desc">專業空間分析與規劃，最大化利用每一寸空間</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-key="portfolio-title">設計案例</h2>
+                <p data-key="portfolio-desc">精選香港本地設計案例，展現我們的設計理念與實力</p>
+            </div>
+            <div class="portfolio-buttons">
+                <button class="portfolio-btn active" data-category="all" data-key="portfolio-all">全部</button>
+                <button class="portfolio-btn" data-category="living-room" data-key="portfolio-living">現代客廳設計</button>
+                <button class="portfolio-btn" data-category="kitchen" data-key="portfolio-kitchen">廚房設計</button>
+                <button class="portfolio-btn" data-category="bedroom" data-key="portfolio-bedroom">臥室設計</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="living-room">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="現代客廳設計">
+                    <div class="portfolio-overlay">
+                        <h3 data-key="portfolio-living">現代客廳設計</h3>
+                        <p data-key="portfolio-living-desc">簡約風格，注重空間感與光線運用</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="kitchen">
+                    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="廚房設計">
+                    <div class="portfolio-overlay">
+                        <h3 data-key="portfolio-kitchen">廚房設計</h3>
+                        <p data-key="portfolio-kitchen-desc">功能性與美觀並重，提升烹飪體驗</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="bedroom">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="臥室設計">
+                    <div class="portfolio-overlay">
+                        <h3 data-key="portfolio-bedroom">臥室設計</h3>
+                        <p data-key="portfolio-bedroom-desc">溫馨舒適，營造完美休息環境</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="products-header">
+                <div class="section-title">
+                    <h2 data-key="products-title">精選產品</h2>
+                    <p data-key="products-desc">精選香港及中國內地優質家具與裝飾產品</p>
+                </div>
+                <div class="products-search">
+                    <input type="text" class="search-box" id="productSearch" placeholder="搜索產品..." data-key="search-placeholder">
+                </div>
+                <div class="category-filter">
+                    <button class="category-btn active" data-category="all" data-key="category-all">全部</button>
+                    <button class="category-btn" data-category="sofa" data-key="category-sofa">沙發</button>
+                    <button class="category-btn" data-category="table" data-key="category-table">餐桌</button>
+                    <button class="category-btn" data-category="chair" data-key="category-chair">椅子</button>
+                    <button class="category-btn" data-category="lighting" data-key="category-lighting">燈飾</button>
+                </div>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="sofa" data-name="現代簡約沙發">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="現代沙發">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category" data-key="category-sofa">沙發</p>
+                        <h3 class="product-name" data-key="product1-name">現代簡約沙發</h3>
+                        <p class="product-description" data-key="product1-desc">採用優質面料，符合人體工學設計，提供舒適坐感。適合現代家居風格。</p>
+                        <button class="view-details" data-product="1" data-key="view-details">查看詳情</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="table" data-name="實木餐桌">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="實木餐桌">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category" data-key="category-table">餐桌</p>
+                        <h3 class="product-name" data-key="product2-name">實木餐桌</h3>
+                        <p class="product-description" data-key="product2-desc">精選優質實木，堅固耐用。簡約設計適合各種家居風格。</p>
+                        <button class="view-details" data-product="2" data-key="view-details">查看詳情</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="chair" data-name="舒適扶手椅">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="扶手椅">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category" data-key="category-chair">椅子</p>
+                        <h3 class="product-name" data-key="product3-name">舒適扶手椅</h3>
+                        <p class="product-description" data-key="product3-desc">高品質填充物，提供完美支撐。適合閱讀角或休息區。</p>
+                        <button class="view-details" data-product="3" data-key="view-details">查看詳情</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="table" data-name="大理石茶几">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551298370-9d3d53740c72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="茶几">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category" data-key="category-table">茶几</p>
+                        <h3 class="product-name" data-key="product4-name">大理石茶几</h3>
+                        <p class="product-description" data-key="product4-desc">精選天然大理石桌面，金屬支架，現代感十足。</p>
+                        <button class="view-details" data-product="4" data-key="view-details">查看詳情</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="lighting" data-name="現代吊燈">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="現代吊燈">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category" data-key="category-lighting">燈飾</p>
+                        <h3 class="product-name" data-key="product5-name">現代吊燈</h3>
+                        <p class="product-description" data-key="product5-desc">簡約設計，優質LED光源，營造溫馨氛圍。</p>
+                        <button class="view-details" data-product="5" data-key="view-details">查看詳情</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="sofa" data-name="L型沙發">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="L型沙發">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category" data-key="category-sofa">沙發</p>
+                        <h3 class="product-name" data-key="product6-name">L型沙發</h3>
+                        <p class="product-description" data-key="product6-desc">大空間設計，適合家庭聚會，多種顏色可選。</p>
+                        <button class="view-details" data-product="6" data-key="view-details">查看詳情</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-key="about-title">關於我們</h2>
+                    <p data-key="about-desc1">香港室內設計公司成立於2010年，擁有超過10年的專業室內設計經驗。我們的團隊由資深設計師和專業施工人員組成，致力於為客戶提供高品質的室內設計服務。</p>
+                    <p data-key="about-desc2">我們注重與客戶的溝通，深入了解客戶的需求和生活方式，從而創造出既美觀又實用的居住空間。我們的設計理念是融合現代美學與功能性，打造獨一無二的室內環境。</p>
+                    <a href="#contact" class="btn" data-key="contact-btn">聯絡我們</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="我們的團隊">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-key="contact-title">聯絡我們</h2>
+                <p data-key="contact-desc">如有任何設計需求或疑問，歡迎與我們聯繫</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-key="contact-info">聯絡資訊</h3>
+                    <p><strong data-key="address-label">地址：</strong>香港九龍觀塘創業街XX號XX中心XX樓</p>
+                    <p><strong data-key="phone-label">電話：</strong>+852 XXXX XXXX</p>
+                    <p><strong data-key="email-label">電郵：</strong>info@hkhkdesign.com</p>
+                    <p><strong data-key="hours-label">營業時間：</strong>週一至週五 9:00-18:00</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="您的姓名" required data-key="name-placeholder">
+                        <input type="email" placeholder="您的電郵" required data-key="email-placeholder">
+                        <input type="tel" placeholder="您的電話" data-key="phone-placeholder">
+                        <textarea placeholder="您的訊息" required data-key="message-placeholder"></textarea>
+                        <button type="submit" class="btn" data-key="send-btn">發送訊息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>香港室內設計</h3>
+                    <p data-key="footer-desc">專業室內設計服務，打造理想生活空間</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="quick-links">快速連結</h3>
+                    <ul>
+                        <li><a href="#home" data-key="home">首頁</a></li>
+                        <li><a href="#services" data-key="services">服務項目</a></li>
+                        <li><a href="#portfolio" data-key="portfolio">設計案例</a></li>
+                        <li><a href="#products" data-key="products">精選產品</a></li>
+                        <li><a href="#about" data-key="about">關於我們</a></li>
+                        <li><a href="#contact" data-key="contact">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="newsletter">訂閱電子報</h3>
+                    <p data-key="newsletter-desc">訂閱我們的電子報，獲取最新設計資訊與優惠</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="您的電郵地址" data-key="newsletter-placeholder">
+                        <button data-key="subscribe-btn">訂閱</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 香港室內設計 版權所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-image-container">
+                <img class="modal-image" id="modalImage" src="" alt="">
+                <div class="modal-nav">
+                    <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="image-counter" id="imageCounter">1 / 3</div>
+            </div>
+            <h2 class="modal-title" id="modalTitle"></h2>
+            <div class="modal-description" id="modalDescription"></div>
+        </div>
+    </div>
+
+    <script>
+        // Language content definitions
+        const languageContent = {
+            'zh-HK': {
+                // Header & Navigation
+                'home': '首頁',
+                'services': '服務項目',
+                'portfolio': '設計案例',
+                'products': '精選產品',
+                'about': '關於我們',
+                'contact': '聯絡我們',
+                
+                // Hero Section
+                'hero-title': '打造理想生活空間',
+                'hero-desc': '香港專業室內設計團隊，融合現代美學與實用功能，為您創造獨一無二的居住體驗',
+                'consult-btn': '免費諮詢',
+                
+                // Services Section
+                'services-title': '我們的服務',
+                'services-desc': '專業室內設計服務，滿足您的各種空間需求',
+                'service1-title': '住宅設計',
+                'service1-desc': '專業住宅空間規劃，打造舒適宜居的家居環境',
+                'service2-title': '商業空間設計',
+                'service2-desc': '辦公室、商店等商業空間設計，提升品牌形象與工作效率',
+                'service3-title': '軟裝設計',
+                'service3-desc': '家具、燈飾、窗簾等軟裝配置，完善空間細節',
+                'service4-title': '空間規劃',
+                'service4-desc': '專業空間分析與規劃，最大化利用每一寸空間',
+                
+                // Portfolio Section
+                'portfolio-title': '設計案例',
+                'portfolio-desc': '精選香港本地設計案例，展現我們的設計理念與實力',
+                'portfolio-all': '全部',
+                'portfolio-living': '現代客廳設計',
+                'portfolio-kitchen': '廚房設計',
+                'portfolio-bedroom': '臥室設計',
+                'portfolio-living-desc': '簡約風格，注重空間感與光線運用',
+                'portfolio-kitchen-desc': '功能性與美觀並重，提升烹飪體驗',
+                'portfolio-bedroom-desc': '溫馨舒適，營造完美休息環境',
+                
+                // Products Section
+                'products-title': '精選產品',
+                'products-desc': '精選香港及中國內地優質家具與裝飾產品',
+                'search-placeholder': '搜索產品...',
+                'category-all': '全部',
+                'category-sofa': '沙發',
+                'category-table': '餐桌',
+                'category-chair': '椅子',
+                'category-lighting': '燈飾',
+                'product1-name': '現代簡約沙發',
+                'product1-desc': '採用優質面料，符合人體工學設計，提供舒適坐感。適合現代家居風格。',
+                'product2-name': '實木餐桌',
+                'product2-desc': '精選優質實木，堅固耐用。簡約設計適合各種家居風格。',
+                'product3-name': '舒適扶手椅',
+                'product3-desc': '高品質填充物，提供完美支撐。適合閱讀角或休息區。',
+                'product4-name': '大理石茶几',
+                'product4-desc': '精選天然大理石桌面，金屬支架，現代感十足。',
+                'product5-name': '現代吊燈',
+                'product5-desc': '簡約設計，優質LED光源，營造溫馨氛圍。',
+                'product6-name': 'L型沙發',
+                'product6-desc': '大空間設計，適合家庭聚會，多種顏色可選。',
+                'view-details': '查看詳情',
+                
+                // Product Modal Descriptions
+                'product1-modal-desc': '這款現代簡約沙發採用優質面料製作，符合人體工學設計，提供極致舒適的坐感。沙發框架使用堅固的實木結構，確保耐用性。適合現代家居風格，可選擇多種顏色以匹配您的室內設計。尺寸：長200cm x 深90cm x 高85cm。',
+                'product2-modal-desc': '精選優質實木製作的餐桌，堅固耐用。桌面經過特殊處理，防刮耐磨，易於清潔。簡約設計適合各種家居風格，可容納6-8人同時用餐。尺寸：長180cm x 寬90cm x 高75cm。',
+                'product3-modal-desc': '高品質填充物製作的扶手椅，提供完美支撐和舒適感。椅架採用堅固金屬結構，外層可拆卸清洗。適合閱讀角或休息區，有多種面料可選。尺寸：寬75cm x 深85cm x 高95cm。',
+                'product4-modal-desc': '精選天然大理石桌面，獨特紋理每件都獨一無二。金屬支架經過防鏽處理，結構穩定。現代感十足的設計，適合客廳使用。尺寸：長120cm x 寬60cm x 高45cm。',
+                'product5-modal-desc': '簡約設計的現代吊燈，採用優質LED光源，節能環保。金屬燈體經過防鏽處理，使用壽命長。適合客廳、餐廳等空間使用。尺寸：直徑60cm x 高30cm。',
+                'product6-modal-desc': '大空間L型沙發設計，適合家庭聚會。高密度海綿填充，提供舒適坐感。多種顏色可選，滿足不同家居風格需求。尺寸：長280cm x 深180cm x 高85cm。',
+                
+                // About Section
+                'about-title': '關於我們',
+                'about-desc1': '香港室內設計公司成立於2010年，擁有超過10年的專業室內設計經驗。我們的團隊由資深設計師和專業施工人員組成，致力於為客戶提供高品質的室內設計服務。',
+                'about-desc2': '我們注重與客戶的溝通，深入了解客戶的需求和生活方式，從而創造出既美觀又實用的居住空間。我們的設計理念是融合現代美學與功能性，打造獨一無二的室內環境。',
+                'contact-btn': '聯絡我們',
+                
+                // Contact Section
+                'contact-title': '聯絡我們',
+                'contact-desc': '如有任何設計需求或疑問，歡迎與我們聯繫',
+                'contact-info': '聯絡資訊',
+                'address-label': '地址：',
+                'phone-label': '電話：',
+                'email-label': '電郵：',
+                'hours-label': '營業時間：',
+                'name-placeholder': '您的姓名',
+                'email-placeholder': '您的電郵',
+                'phone-placeholder': '您的電話',
+                'message-placeholder': '您的訊息',
+                'send-btn': '發送訊息',
+                
+                // Footer
+                'footer-desc': '專業室內設計服務，打造理想生活空間',
+                'quick-links': '快速連結',
+                'newsletter': '訂閱電子報',
+                'newsletter-desc': '訂閱我們的電子報，獲取最新設計資訊與優惠',
+                'newsletter-placeholder': '您的電郵地址',
+                'subscribe-btn': '訂閱'
+            },
+            'zh-CN': {
+                // Header & Navigation
+                'home': '首页',
+                'services': '服务项目',
+                'portfolio': '设计案例',
+                'products': '精选产品',
+                'about': '关于我们',
+                'contact': '联系我们',
+                
+                // Hero Section
+                'hero-title': '打造理想生活空间',
+                'hero-desc': '香港专业室内设计团队，融合现代美学与实用功能，为您创造独一无二的居住体验',
+                'consult-btn': '免费咨询',
+                
+                // Services Section
+                'services-title': '我们的服务',
+                'services-desc': '专业室内设计服务，满足您的各种空间需求',
+                'service1-title': '住宅设计',
+                'service1-desc': '专业住宅空间规划，打造舒适宜居的家居环境',
+                'service2-title': '商业空间设计',
+                'service2-desc': '办公室、商店等商业空间设计，提升品牌形象与工作效率',
+                'service3-title': '软装设计',
+                'service3-desc': '家具、灯饰、窗帘等软装配置，完善空间细节',
+                'service4-title': '空间规划',
+                'service4-desc': '专业空间分析与规划，最大化利用每一寸空间',
+                
+                // Portfolio Section
+                'portfolio-title': '设计案例',
+                'portfolio-desc': '精选香港本地设计案例，展现我们的设计理念与实力',
+                'portfolio-all': '全部',
+                'portfolio-living': '现代客厅设计',
+                'portfolio-kitchen': '厨房设计',
+                'portfolio-bedroom': '卧室设计',
+                'portfolio-living-desc': '简约风格，注重空间感与光线运用',
+                'portfolio-kitchen-desc': '功能性与美观并重，提升烹饪体验',
+                'portfolio-bedroom-desc': '温馨舒适，营造完美休息环境',
+                
+                // Products Section
+                'products-title': '精选产品',
+                'products-desc': '精选香港及中国内地优质家具与装饰产品',
+                'search-placeholder': '搜索产品...',
+                'category-all': '全部',
+                'category-sofa': '沙发',
+                'category-table': '餐桌',
+                'category-chair': '椅子',
+                'category-lighting': '灯饰',
+                'product1-name': '现代简约沙发',
+                'product1-desc': '采用优质面料，符合人体工学设计，提供舒适坐感。适合现代家居风格。',
+                'product2-name': '实木餐桌',
+                'product2-desc': '精选优质实木，坚固耐用。简约设计适合各种家居风格。',
+                'product3-name': '舒适扶手椅',
+                'product3-desc': '高品质填充物，提供完美支撑。适合阅读角或休息区。',
+                'product4-name': '大理石茶几',
+                'product4-desc': '精选天然大理石桌面，金属支架，现代感十足。',
+                'product5-name': '现代吊灯',
+                'product5-desc': '简约设计，优质LED光源，营造温馨氛围。',
+                'product6-name': 'L型沙发',
+                'product6-desc': '大空间设计，适合家庭聚会，多种颜色可选。',
+                'view-details': '查看详情',
+                
+                // Product Modal Descriptions
+                'product1-modal-desc': '这款现代简约沙发采用优质面料制作，符合人体工学设计，提供极致舒适的坐感。沙发框架使用坚固的实木结构，确保耐用性。适合现代家居风格，可选择多种颜色以匹配您的室内设计。尺寸：长200cm x 深90cm x 高85cm。',
+                'product2-modal-desc': '精选优质实木制作的餐桌，坚固耐用。桌面经过特殊处理，防刮耐磨，易于清洁。简约设计适合各种家居风格，可容纳6-8人同时用餐。尺寸：长180cm x 宽90cm x 高75cm。',
+                'product3-modal-desc': '高品质填充物制作的扶手椅，提供完美支撑和舒适感。椅架采用坚固金属结构，外层可拆卸清洗。适合阅读角或休息区，有多种面料可选。尺寸：宽75cm x 深85cm x 高95cm。',
+                'product4-modal-desc': '精选天然大理石桌面，独特纹理每件都独一无二。金属支架经过防锈处理，结构稳定。现代感十足的设计，适合客厅使用。尺寸：长120cm x 宽60cm x 高45cm。',
+                'product5-modal-desc': '简约设计的现代吊灯，采用优质LED光源，节能环保。金属灯体经过防锈处理，使用寿命长。适合客厅、餐厅等空间使用。尺寸：直径60cm x 高30cm。',
+                'product6-modal-desc': '大空间L型沙发设计，适合家庭聚会。高密度海绵填充，提供舒适坐感。多种颜色可选，满足不同家居风格需求。尺寸：长280cm x 深180cm x 高85cm。',
+                
+                // About Section
+                'about-title': '关于我们',
+                'about-desc1': '香港室内设计公司成立于2010年，拥有超过10年的专业室内设计经验。我们的团队由资深设计师和专业施工人员组成，致力于为客户提供高品质的室内设计服务。',
+                'about-desc2': '我们注重与客户的沟通，深入了解客户的需求和生活方式，从而创造出既美观又实用的居住空间。我们的设计理念是融合现代美学与功能性，打造独一无二的室内环境。',
+                'contact-btn': '联系我们',
+                
+                // Contact Section
+                'contact-title': '联系我们',
+                'contact-desc': '如有任何设计需求或疑问，欢迎与我们联系',
+                'contact-info': '联络信息',
+                'address-label': '地址：',
+                'phone-label': '电话：',
+                'email-label': '邮箱：',
+                'hours-label': '营业时间：',
+                'name-placeholder': '您的姓名',
+                'email-placeholder': '您的邮箱',
+                'phone-placeholder': '您的电话',
+                'message-placeholder': '您的消息',
+                'send-btn': '发送消息',
+                
+                // Footer
+                'footer-desc': '专业室内设计服务，打造理想生活空间',
+                'quick-links': '快速链接',
+                'newsletter': '订阅电子报',
+                'newsletter-desc': '订阅我们的电子报，获取最新设计资讯与优惠',
+                'newsletter-placeholder': '您的邮箱地址',
+                'subscribe-btn': '订阅'
+            }
+        };
+
+        // Product image data
+        const productImages = {
+            1: [
+                'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            ],
+            2: [
+                'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            ],
+            3: [
+                'https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            ],
+            4: [
+                'https://images.unsplash.com/photo-1551298370-9d3d53740c72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1532372576444-dda954194ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            ],
+            5: [
+                'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1513506003901-6e119a34d2e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1558618666-fcd25856cd63?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            ],
+            6: [
+                'https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language
+            let currentLang = 'zh-HK';
+            
+            // Product modal state
+            let currentProductId = null;
+            let currentImageIndex = 0;
+            let currentImages = [];
+            
+            // Language switching functionality
+            const langSelector = document.querySelector('.lang-selector');
+            const langBtn = document.querySelector('.lang-btn');
+            const langOptions = document.querySelector('.lang-options');
+            const langButtons = document.querySelectorAll('.lang-options a');
+            
+            langBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langSelector.classList.toggle('active');
+            });
+            
+            langButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    
+                    if (lang === 'zh-HK') {
+                        langBtn.innerHTML = '繁體中文 <i class="fas fa-chevron-down"></i>';
+                        currentLang = 'zh-HK';
+                        updateContent(currentLang);
+                    } else if (lang === 'zh-CN') {
+                        langBtn.innerHTML = '简体中文 <i class="fas fa-chevron-down"></i>';
+                        currentLang = 'zh-CN';
+                        updateContent(currentLang);
+                    }
+                    
+                    langSelector.classList.remove('active');
+                });
+            });
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', function() {
+                langSelector.classList.remove('active');
+            });
+            
+            // Mobile menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('active');
+                });
+            });
+            
+            // Portfolio filtering
+            const portfolioButtons = document.querySelectorAll('.portfolio-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            portfolioButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    portfolioButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide portfolio items based on category
+                    portfolioItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Show corresponding products when portfolio category is clicked
+                    if (category !== 'all') {
+                        showProductsByRoom(category);
+                        // Scroll to products section
+                        document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Product category filtering
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide product cards based on category
+                    productCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Product search functionality
+            const searchBox = document.getElementById('productSearch');
+            
+            searchBox.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                productCards.forEach(card => {
+                    const productName = card.getAttribute('data-name').toLowerCase();
+                    const productCategory = card.getAttribute('data-category');
+                    
+                    if (productName.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Product modal functionality
+            const viewDetailsButtons = document.querySelectorAll('.view-details');
+            const productModal = document.getElementById('productModal');
+            const closeModal = document.querySelector('.close-modal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const imageCounter = document.getElementById('imageCounter');
+            
+            viewDetailsButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    currentProductId = this.getAttribute('data-product');
+                    
+                    // Get the product card to find the product name
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('.product-name').textContent;
+                    
+                    // Get the appropriate description based on current language
+                    const descriptionKey = 'product' + currentProductId + '-modal-desc';
+                    const productDescription = languageContent[currentLang][descriptionKey];
+                    
+                    // Set up the image gallery
+                    currentImages = productImages[currentProductId] || [];
+                    currentImageIndex = 0;
+                    
+                    if (currentImages.length > 0) {
+                        modalImage.src = currentImages[currentImageIndex];
+                        updateImageCounter();
+                    }
+                    
+                    modalTitle.textContent = productName;
+                    modalDescription.textContent = productDescription;
+                    
+                    productModal.style.display = 'block';
+                });
+            });
+            
+            // Navigation buttons
+            prevBtn.addEventListener('click', function() {
+                if (currentImages.length > 0) {
+                    currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+                    modalImage.src = currentImages[currentImageIndex];
+                    updateImageCounter();
+                }
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                if (currentImages.length > 0) {
+                    currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+                    modalImage.src = currentImages[currentImageIndex];
+                    updateImageCounter();
+                }
+            });
+            
+            function updateImageCounter() {
+                if (currentImages.length > 1) {
+                    imageCounter.textContent = (currentImageIndex + 1) + ' / ' + currentImages.length;
+                    imageCounter.style.display = 'block';
+                } else {
+                    imageCounter.style.display = 'none';
+                }
+            }
+            
+            closeModal.addEventListener('click', function() {
+                productModal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === productModal) {
+                    productModal.style.display = 'none';
+                }
+            });
+            
+            // Image zoom functionality
+            const productImagesElements = document.querySelectorAll('.product-image');
+            
+            productImagesElements.forEach(image => {
+                image.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('.product-name').textContent;
+                    currentProductId = productCard.querySelector('.view-details').getAttribute('data-product');
+                    
+                    // Get the appropriate description based on current language
+                    const descriptionKey = 'product' + currentProductId + '-modal-desc';
+                    const productDescription = languageContent[currentLang][descriptionKey];
+                    
+                    // Set up the image gallery
+                    currentImages = productImages[currentProductId] || [];
+                    currentImageIndex = 0;
+                    
+                    if (currentImages.length > 0) {
+                        modalImage.src = currentImages[currentImageIndex];
+                        updateImageCounter();
+                    }
+                    
+                    modalTitle.textContent = productName;
+                    modalDescription.textContent = productDescription;
+                    
+                    productModal.style.display = 'block';
+                });
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert(currentLang === 'zh-HK' ? '感謝您的訊息！我們會盡快回覆您。' : '感谢您的消息！我们会尽快回复您。');
+                contactForm.reset();
+            });
+            
+            // Function to show products by room type
+            function showProductsByRoom(roomType) {
+                // Reset all category buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Activate "all" category
+                document.querySelector('.category-btn[data-category="all"]').classList.add('active');
+                
+                // Define which product categories to show for each room type
+                const roomProductMap = {
+                    'living-room': ['sofa', 'table', 'lighting'],
+                    'kitchen': ['table', 'chair'],
+                    'bedroom': ['sofa', 'table', 'chair']
+                };
+                
+                const categoriesToShow = roomProductMap[roomType] || ['all'];
+                
+                // Show/hide products based on room type
+                productCards.forEach(card => {
+                    const productCategory = card.getAttribute('data-category');
+                    
+                    if (categoriesToShow.includes('all') || categoriesToShow.includes(productCategory)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Function to update content based on language
+            function updateContent(lang) {
+                const content = languageContent[lang];
+                
+                // Update all elements with data-key attributes
+                document.querySelectorAll('[data-key]').forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    if (content[key]) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = content[key];
+                        } else {
+                            element.textContent = content[key];
+                        }
+                    }
+                });
+                
+                // Update modal description if it's open
+                if (currentProductId && productModal.style.display === 'block') {
+                    const descriptionKey = 'product' + currentProductId + '-modal-desc';
+                    modalDescription.textContent = content[descriptionKey];
+                }
+            }
+            
+            // Initialize with Traditional Chinese
+            updateContent(currentLang);
+        });
+    </script>
+</body>
+</html>

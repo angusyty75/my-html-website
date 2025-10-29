@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Business Solutions - Professional Services in Hong Kong</title>
+    <meta name="description" content="Professional business solutions, web development, and consulting services in Hong Kong. WhatsApp: 51121555">
+    <meta name="keywords" content="Hong Kong business, web development, consulting, digital solutions, professional services, WhatsApp 51121555">
+    <meta name="author" content="Global Business Solutions">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Global Business Solutions - Professional Services in Hong Kong">
+    <meta property="og:description" content="Expert business solutions with WhatsApp contact: 51121555">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.globalbusinesssolutions.hk">
+    <meta property="og:image" content="https://www.globalbusinesssolutions.hk/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.globalbusinesssolutions.hk">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Global Business Solutions",
+        "url": "https://www.globalbusinesssolutions.hk",
+        "logo": "https://www.globalbusinesssolutions.hk/logo.png",
+        "description": "Professional business solutions and consulting services in Hong Kong",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Central District",
+            "addressLocality": "Hong Kong",
+            "addressCountry": "HK"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+852-5112-1555",
+            "contactType": "customer service",
+            "areaServed": "HK",
+            "availableLanguage": ["en", "zh-Hant"]
+        }
+    }
+    </script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --sidebar-width: 320px;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.1"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .top-right-menu {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+        
+        .language-selector {
+            margin-right: 10px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            background: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        
+        .contact-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #f8f9fa;
+            border-radius: 50px;
+            padding: 8px 15px;
+            margin: 5px;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-badge:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .language-option {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .language-option:hover {
+            background: rgba(0,0,0,0.05);
+        }
+        
+        .lang-en { display: block; }
+        .lang-zh { display: none; }
+        
+        body:lang(zh) .lang-en { display: none; }
+        body:lang(zh) .lang-zh { display: block; }
+        
+        /* Page Content Styles */
+        .page-content {
+            display: none;
+            padding: 40px 0;
+        }
+        
+        .page-content.active {
+            display: block;
+        }
+        
+        .blog-preview {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Left Side Menu Styles */
+        .menu-toggle {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .menu-toggle:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+        
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: calc(-1 * var(--sidebar-width));
+            width: var(--sidebar-width);
+            height: 100%;
+            background: white;
+            box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+            transition: left 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .side-menu.open {
+            left: 0;
+        }
+        
+        .menu-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .menu-logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .close-menu {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .menu-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        .menu-section {
+            margin-bottom: 25px;
+        }
+        
+        .menu-section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            color: #555;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .menu-item:hover {
+            background: #f0f7ff;
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+        
+        .menu-item i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .menu-divider {
+            height: 1px;
+            background: #eee;
+            margin: 20px 0;
+        }
+        
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            
+            .display-4 {
+                font-size: 2.2rem;
+            }
+            
+            .top-right-menu {
+                margin-left: 0;
+            }
+            
+            :root {
+                --sidebar-width: 280px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            :root {
+                --sidebar-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100" lang="en">
+    
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-dark text-white p-2" style="z-index: 9999;">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#home" aria-label="Global Business Solutions - Home">
+                <i class="fas fa-globe-asia me-2"></i>
+                <span class="lang-en">Global Business Solutions</span>
+                <span class="lang-zh">全球商業解決方案</span>
+            </a>
+            
+            <!-- Top Right Menu -->
+            <div class="top-right-menu">
+                <!-- Language Selector -->
+                <div class="language-selector dropdown">
+                    <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                        <i class="fas fa-language me-1"></i>
+                        <span class="lang-en">English</span>
+                        <span class="lang-zh">English</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item language-option" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item language-option" href="#" data-lang="zh">繁體中文</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Menu Toggle Button -->
+                <button class="menu-toggle ms-2" id="menuToggle" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Left Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <div class="menu-header">
+            <div class="menu-logo">
+                <i class="fas fa-globe-asia me-2"></i>
+                <span class="lang-en">Global Solutions</span>
+                <span class="lang-zh">全球解決方案</span>
+            </div>
+            <button class="close-menu" id="closeMenu" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="menu-content">
+            <!-- Home Section -->
+            <div class="menu-section">
+                <div class="menu-section-title">
+                    <i class="fas fa-home me-2"></i>
+                    <span class="lang-en">Navigation</span>
+                    <span class="lang-zh">導航</span>
+                </div>
+                <a class="menu-item" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span class="lang-en">Home</span>
+                    <span class="lang-zh">主頁</span>
+                </a>
+                <a class="menu-item" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="lang-en">About Us</span>
+                    <span class="lang-zh">關於我們</span>
+                </a>
+                <a class="menu-item" data-page="services">
+                    <i class="fas fa-cogs"></i>
+                    <span class="lang-en">Our Services</span>
+                    <span class="lang-zh">我們的服務</span>
+                </a>
+                <a class="menu-item" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span class="lang-en">Contact</span>
+                    <span class="lang-zh">聯絡我們</span>
+                </a>
+            </div>
+            
+            <div class="menu-divider"></div>
+            
+            <!-- Services Section -->
+            <div class="menu-section">
+                <div class="menu-section-title">
+                    <i class="fas fa-concierge-bell me-2"></i>
+                    <span class="lang-en">Our Services</span>
+                    <span class="lang-zh">我們的服務</span>
+                </div>
+                <a class="menu-item" data-page="web-development">
+                    <i class="fas fa-laptop-code"></i>
+                    <span class="lang-en">Web Development</span>
+                    <span class="lang-zh">網站開發</span>
+                </a>
+                <a class="menu-item" data-page="consulting">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="lang-en">Business Consulting</span>
+                    <span class="lang-zh">商業諮詢</span>
+                </a>
+                <a class="menu-item" data-page="digital-marketing">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="lang-en">Digital Marketing</span>
+                    <span class="lang-zh">數字營銷</span>
+                </a>
+                <a class="menu-item" data-page="seo">
+                    <i class="fas fa-search"></i>
+                    <span class="lang-en">SEO Optimization</span>
+                    <span class="lang-zh">SEO優化</span>
+                </a>
+            </div>
+            
+            <div class="menu-divider"></div>
+            
+            <!-- Company Section -->
+            <div class="menu-section">
+                <div class="menu-section-title">
+                    <i class="fas fa-building me-2"></i>
+                    <span class="lang-en">Company</span>
+                    <span class="lang-zh">公司資訊</span>
+                </div>
+                <a class="menu-item" data-page="history">
+                    <i class="fas fa-history"></i>
+                    <span class="lang-en">Our History</span>
+                    <span class="lang-zh">我們的歷史</span>
+                </a>
+                <a class="menu-item" data-page="portfolio">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="lang-en">Portfolio</span>
+                    <span class="lang-zh">作品集</span>
+                </a>
+            </div>
+            
+            <div class="menu-divider"></div>
+            
+            <!-- Blog Section -->
+            <div class="menu-section">
+                <div class="menu-section-title">
+                    <i class="fas fa-blog me-2"></i>
+                    <span class="lang-en">Blog</span>
+                    <span class="lang-zh">博客</span>
+                </div>
+                <a href="https://angusyu.blogspot.com" class="menu-item" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span class="lang-en">Visit Our Blog</span>
+                    <span class="lang-zh">訪問我們的博客</span>
+                </a>
+                <a class="menu-item" data-page="blog">
+                    <i class="fas fa-newspaper"></i>
+                    <span class="lang-en">Blog Highlights</span>
+                    <span class="lang-zh">博客精選</span>
+                </a>
+            </div>
+            
+            <div class="menu-divider"></div>
+            
+            <!-- Contact Section -->
+            <div class="menu-section">
+                <div class="menu-section-title">
+                    <i class="fas fa-address-book me-2"></i>
+                    <span class="lang-en">Contact Us</span>
+                    <span class="lang-zh">聯絡我們</span>
+                </div>
+                <a href="https://wa.me/85251121555" class="menu-item" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp: 5112 1555</span>
+                </a>
+                <a href="mailto:angus0705@hotmail.com" class="menu-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>angus0705@hotmail.com</span>
+                </a>
+                <a class="menu-item" data-page="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="lang-en">Our Location</span>
+                    <span class="lang-zh">我們的位置</span>
+                </a>
+            </div>
+            
+            <div class="menu-divider"></div>
+            
+            <!-- Social Media -->
+            <div class="menu-section">
+                <div class="menu-section-title">
+                    <i class="fas fa-share-alt me-2"></i>
+                    <span class="lang-en">Follow Us</span>
+                    <span class="lang-zh">關注我們</span>
+                </div>
+                <div class="d-flex justify-content-around mt-3">
+                    <a href="https://wa.me/85251121555" class="social-icon" target="_blank" aria-label="Contact us on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://facebook.com" class="social-icon" target="_blank" aria-label="Follow us on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="mailto:angus0705@hotmail.com" class="social-icon" aria-label="Email us">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-shrink-0">
+        <!-- Home Page -->
+        <section id="home-page" class="page-content active">
+            <!-- Hero Section -->
+            <section id="home" class="hero-section text-center">
+                <div class="container position-relative">
+                    <h1 class="display-4 fw-bold mb-4 lang-en">Professional Business Solutions</h1>
+                    <h1 class="display-4 fw-bold mb-4 lang-zh">專業商業解決方案</h1>
+                    
+                    <p class="lead mb-4 lang-en">
+                        We provide expert business consulting, web development, and digital solutions to help your company grow in Hong Kong and beyond.
+                    </p>
+                    <p class="lead mb-4 lang-zh">
+                        我們提供專業的商業諮詢、網站開發和數字化解決方案，幫助您的公司在香港及全球範圍內發展。
+                    </p>
+                    
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a class="btn btn-light btn-lg menu-item" data-page="contact">
+                            <span class="lang-en">Get Started</span>
+                            <span class="lang-zh">開始使用</span>
+                        </a>
+                        <a class="btn btn-outline-light btn-lg menu-item" data-page="services">
+                            <span class="lang-en">Our Services</span>
+                            <span class="lang-zh">我們的服務</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Preview Section -->
+            <section id="about-preview" class="py-5">
+                <div class="container">
+                    <h2 class="text-center section-title lang-en">About Us</h2>
+                    <h2 class="text-center section-title lang-zh">關於我們</h2>
+                    
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 mb-4">
+                            <p class="lang-en">
+                                With over 10 years of experience in the industry, Global Business Solutions has been helping companies 
+                                navigate the digital landscape and achieve their business goals.
+                            </p>
+                            <p class="lang-zh">
+                                憑藉在行業內超過10年的經驗，全球商業解決方案一直幫助公司應對數字化環境並實現其業務目標。
+                            </p>
+                            <a class="btn btn-primary menu-item" data-page="about">
+                                <span class="lang-en">Learn More About Us</span>
+                                <span class="lang-zh">了解更多關於我們</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row text-center">
+                                <div class="col-md-4 mb-4">
+                                    <i class="fas fa-users feature-icon"></i>
+                                    <h4 class="lang-en">Expert Team</h4>
+                                    <h4 class="lang-zh">專業團隊</h4>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <i class="fas fa-award feature-icon"></i>
+                                    <h4 class="lang-en">Quality Service</h4>
+                                    <h4 class="lang-zh">優質服務</h4>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <i class="fas fa-handshake feature-icon"></i>
+                                    <h4 class="lang-en">Partnership</h4>
+                                    <h4 class="lang-zh">合作夥伴</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Preview Section -->
+            <section id="services-preview" class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center section-title lang-en">Our Services</h2>
+                    <h2 class="text-center section-title lang-zh">我們的服務</h2>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card service-card h-100 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-laptop-code feature-icon"></i>
+                                    <h4 class="card-title lang-en">Web Development</h4>
+                                    <h4 class="card-title lang-zh">網站開發</h4>
+                                    <a class="btn btn-outline-primary btn-sm mt-2 menu-item" data-page="web-development">
+                                        <span class="lang-en">Learn More</span>
+                                        <span class="lang-zh">了解更多</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card service-card h-100 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-chart-line feature-icon"></i>
+                                    <h4 class="card-title lang-en">Digital Marketing</h4>
+                                    <h4 class="card-title lang-zh">數字營銷</h4>
+                                    <a class="btn btn-outline-primary btn-sm mt-2 menu-item" data-page="digital-marketing">
+                                        <span class="lang-en">Learn More</span>
+                                        <span class="lang-zh">了解更多</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card service-card h-100 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-briefcase feature-icon"></i>
+                                    <h4 class="card-title lang-en">Business Consulting</h4>
+                                    <h4 class="card-title lang-zh">商業諮詢</h4>
+                                    <a class="btn btn-outline-primary btn-sm mt-2 menu-item" data-page="consulting">
+                                        <span class="lang-en">Learn More</span>
+                                        <span class="lang-zh">了解更多</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card service-card h-100 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-search feature-icon"></i>
+                                    <h4 class="card-title lang-en">SEO Optimization</h4>
+                                    <h4 class="card-title lang-zh">SEO優化</h4>
+                                    <a class="btn btn-outline-primary btn-sm mt-2 menu-item" data-page="seo">
+                                        <span class="lang-en">Learn More</span>
+                                        <span class="lang-zh">了解更多</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Page -->
+        <section id="about-page" class="page-content">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="text-center mb-5 lang-en">About Global Business Solutions</h1>
+                        <h1 class="text-center mb-5 lang-zh">關於全球商業解決方案</h1>
+                        
+                        <div class="mb-5">
+                            <h3 class="lang-en">Our Story</h3>
+                            <h3 class="lang-zh">我們的故事</h3>
+                            <p class="lang-en">
+                                Founded in 2013, Global Business Solutions began as a small web development agency in Hong Kong. 
+                                Over the years, we've expanded our services to include comprehensive digital solutions, business 
+                                consulting, and marketing strategies tailored for the unique Hong Kong market.
+                            </p>
+                            <p class="lang-zh">
+                                全球商業解決方案成立於2013年，最初是香港一家小型網站開發機構。
+                                多年來，我們擴展了服務範圍，包括全面的數字解決方案、商業諮詢和針對香港獨特市場量身定制的營銷策略。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Page -->
+        <section id="services-page" class="page-content">
+            <div class="container py-5">
+                <h1 class="text-center mb-5 lang-en">Our Services</h1>
+                <h1 class="text-center mb-5 lang-zh">我們的服務</h1>
+                
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <p class="lead text-center mb-5 lang-en">
+                            We offer a comprehensive range of digital services to help your business thrive in the modern marketplace.
+                        </p>
+                        <p class="lead text-center mb-5 lang-zh">
+                            我們提供全面的數字服務，幫助您的企業在現代市場中蓬勃發展。
+                        </p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card service-card h-100 shadow-sm">
+                                    <div class="card-body p-4">
+                                        <i class="fas fa-laptop-code feature-icon"></i>
+                                        <h4 class="card-title lang-en">Web Development</h4>
+                                        <h4 class="card-title lang-zh">網站開發</h4>
+                                        <p class="card-text lang-en">
+                                            Custom website and web application development using the latest technologies.
+                                        </p>
+                                        <p class="card-text lang-zh">
+                                            使用最新技術定制網站和Web應用程序開發。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card service-card h-100 shadow-sm">
+                                    <div class="card-body p-4">
+                                        <i class="fas fa-briefcase feature-icon"></i>
+                                        <h4 class="card-title lang-en">Business Consulting</h4>
+                                        <h4 class="card-title lang-zh">商業諮詢</h4>
+                                        <p class="card-text lang-en">
+                                            Strategic business consulting to help you optimize operations and identify growth opportunities.
+                                        </p>
+                                        <p class="card-text lang-zh">
+                                            戰略商業諮詢，幫助您優化運營，識別增長機會。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card service-card h-100 shadow-sm">
+                                    <div class="card-body p-4">
+                                        <i class="fas fa-chart-line feature-icon"></i>
+                                        <h4 class="card-title lang-en">Digital Marketing</h4>
+                                        <h4 class="card-title lang-zh">數字營銷</h4>
+                                        <p class="card-text lang-en">
+                                            Comprehensive digital marketing strategies to increase your brand visibility.
+                                        </p>
+                                        <p class="card-text lang-zh">
+                                            全面的數字營銷策略，以提高您的品牌知名度。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card service-card h-100 shadow-sm">
+                                    <div class="card-body p-4">
+                                        <i class="fas fa-search feature-icon"></i>
+                                        <h4 class="card-title lang-en">SEO Optimization</h4>
+                                        <h4 class="card-title lang-zh">SEO優化</h4>
+                                        <p class="card-text lang-en">
+                                            Search engine optimization services to improve your website's visibility in search results.
+                                        </p>
+                                        <p class="card-text lang-zh">
+                                            搜索引擎優化服務，以提高您的網站在搜索結果中的可見度。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Development Page -->
+        <section id="web-development-page" class="page-content">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="text-center mb-4 lang-en">Web Development Services</h1>
+                        <h1 class="text-center mb-4 lang-zh">網站開發服務</h1>
+                        
+                        <div class="text-center mb-5">
+                            <i class="fas fa-laptop-code feature-icon"></i>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <h3 class="lang-en">Custom Web Development</h3>
+                            <h3 class="lang-zh">定制網站開發</h3>
+                            <p class="lang-en">
+                                We create bespoke websites and web applications tailored to your specific business needs. 
+                                Our development process focuses on performance, security, and user experience.
+                            </p>
+                            <p class="lang-zh">
+                                我們根據您的具體業務需求創建定制的網站和Web應用程序。
+                                我們的開發過程側重於性能、安全性和用戶體驗。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consulting Page -->
+        <section id="consulting-page" class="page-content">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="text-center mb-4 lang-en">Business Consulting</h1>
+                        <h1 class="text-center mb-4 lang-zh">商業諮詢</h1>
+                        
+                        <div class="text-center mb-5">
+                            <i class="fas fa-briefcase feature-icon"></i>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <h3 class="lang-en">Strategic Business Advice</h3>
+                            <h3 class="lang-zh">戰略商業建議</h3>
+                            <p class="lang-en">
+                                Our consulting services help businesses navigate challenges and identify opportunities for growth. 
+                                We provide actionable insights and strategies tailored to your specific industry and market position.
+                            </p>
+                            <p class="lang-zh">
+                                我們的諮詢服務幫助企業應對挑戰並識別增長機會。
+                                我們提供針對您的特定行業和市場地位量身定制的可行見解和策略。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Marketing Page -->
+        <section id="digital-marketing-page" class="page-content">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="text-center mb-4 lang-en">Digital Marketing</h1>
+                        <h1 class="text-center mb-4 lang-zh">數字營銷</h1>
+                        
+                        <div class="text-center mb-5">
+                            <i class="fas fa-chart-line feature-icon"></i>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <h3 class="lang-en">Comprehensive Digital Strategies</h3>
+                            <h3 class="lang-zh">全面的數字策略</h3>
+                            <p class="lang-en">
+                                We develop and execute digital marketing campaigns that drive results. Our data-driven approach 
+                                ensures your marketing efforts deliver maximum ROI and business growth.
+                            </p>
+                            <p class="lang-zh">
+                                我們制定並執行推動結果的數字營銷活動。我們的數據驅動方法確保您的營銷努力帶來最大的投資回報率和業務增長。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Page -->
+        <section id="seo-page" class="page-content">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="text-center mb-4 lang-en">SEO Optimization</h1>
+                        <h1 class="text-center mb-4 lang-zh">SEO優化</h1>
+                        
+                        <div class="text-center mb-5">
+                            <i class="fas fa-search feature-icon"></i>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <h3 class="lang-en">Improve Your Search Visibility</h3>
+                            <h3 class="lang-zh">提高您的搜索可見度</h3>
+                            <p class="lang-en">
+                                Our SEO services help your website rank higher in search engine results, driving more organic traffic 
+                                and qualified leads to your business. We use white-hat SEO techniques that deliver sustainable results.
+                            </p>
+                            <p class="lang-zh">
+                                我們的SEO服務幫助您的網站在搜索引擎結果中獲得更高排名，為您的業務帶來更多自然流量和合格潛在客戶。
+                                我們使用白帽SEO技術，提供可持續的結果。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Page -->
+        <section id="history-page" class="page-content">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="text-center mb-5 lang-en">Our History</h1>
+                        <h1 class="text-center mb-5 lang-zh">我們的歷史</h1>
+                        
+                        <div class="mb-5">
+                            <h3 class="lang-en">2013 - Foundation</h3>
+                            <h3 class="lang-zh">2013年 - 成立</h3>
+                            <p class="lang-en">
+                                Global Business Solutions was founded in Hong Kong with a focus on web development 
+                                for small and medium-sized businesses.
+                            </p>
+                            <p class="lang-zh">
+                                全球商業解決方案在香港成立，專注於中小型企業的網站開發。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Page -->
+        <section id="portfolio-page" class="page-content">
+            <div class="container py-5">
+                <h1 class="text-center mb-5 lang-en">Our Portfolio</h1>
+                <h1 class="text-center mb-5 lang-zh">我們的作品集</h1>
+                
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <p class="lead text-center mb-5 lang-en">
+                            Explore some of our recent projects and success stories
+                        </p>
+                        <p class="lead text-center mb-5 lang-zh">
+                            探索我們最近的一些項目和成功案例
+                        </p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card service-card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="card-title lang-en">E-commerce Platform</h4>
+                                        <h4 class="card-title lang-zh">電子商務平台</h4>
+                                        <p class="card-text lang-en">
+                                            Developed a custom e-commerce solution for a retail client.
+                                        </p>
+                                        <p class="card-text lang-zh">
+                                            為零售客戶開發定制的電子商務解決方案。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card service-card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="card-title lang-en">Corporate Website</h4>
+                                        <h4 class="card-title lang-zh">企業網站</h4>
+                                        <p class="card-text lang-en">
+                                            Redesigned and developed a corporate website for a financial services company.
+                                        </p>
+                                        <p class="card-text lang-zh">
+                                            為金融服務公司重新設計和開發企業網站。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Page -->
+        <section id="blog-page" class="page-content">
+            <div class="container py-5">
+                <h1 class="text-center mb-5 lang-en">Blog Highlights</h1>
+                <h1 class="text-center mb-5 lang-zh">博客精選</h1>
+                
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="text-center mb-5">
+                            <p class="lead lang-en">
+                                Visit our blog for the latest insights on digital business, technology, and marketing trends.
+                            </p>
+                            <p class="lead lang-zh">
+                                訪問我們的博客，了解有關數字業務、技術和營銷趨勢的最新見解。
+                            </p>
+                            <a href="https://angusyu.blogspot.com" class="btn btn-primary btn-lg" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>
+                                <span class="lang-en">Visit Our Blog</span>
+                                <span class="lang-zh">訪問我們的博客</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact-page" class="page-content">
+            <div class="container py-5">
+                <h1 class="text-center section-title lang-en">Contact Us</h1>
+                <h1 class="text-center section-title lang-zh">聯絡我們</h1>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4 lang-en">Get In Touch</h4>
+                                <h4 class="card-title mb-4 lang-zh">與我們聯繫</h4>
+                                
+                                <div class="mb-4">
+                                    <h5 class="lang-en">Contact Information</h5>
+                                    <h5 class="lang-zh">聯絡資訊</h5>
+                                    <p><i class="fas fa-phone me-2"></i> +852 5112 1555</p>
+                                    <p><i class="fas fa-envelope me-2"></i> angus0705@hotmail.com</p>
+                                    <p><i class="fas fa-map-marker-alt me-2"></i> Central District, Hong Kong</p>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h5 class="lang-en">Connect With Us</h5>
+                                    <h5 class="lang-zh">與我們聯繫</h5>
+                                    <div class="d-flex flex-wrap mt-3">
+                                        <a href="https://wa.me/85251121555" class="contact-badge" target="_blank">
+                                            <i class="fab fa-whatsapp me-2"></i>
+                                            <span>WhatsApp: 5112 1555</span>
+                                        </a>
+                                        <a href="mailto:angus0705@hotmail.com" class="contact-badge">
+                                            <i class="fas fa-envelope me-2"></i>
+                                            <span class="lang-en">Email Us</span>
+                                            <span class="lang-zh">電郵我們</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4 lang-en">Our Location</h4>
+                                <h4 class="card-title mb-4 lang-zh">我們的位置</h4>
+                                
+                                <div class="map-container">
+                                    <!-- Google Maps Embed -->
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.856232803246!2d114.1557493153932!3d22.28223934920014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040064b5c7d36d%3A0x68ddf3664dfef887!2sCentral%2C%20Hong%20Kong!5e0!3m2!1sen!2shk!4v1647856782344!5m2!1sen!2shk" 
+                                        width="100%" 
+                                        height="300" 
+                                        style="border:0;" 
+                                        allowfullscreen="" 
+                                        loading="lazy"
+                                        title="Our location in Central, Hong Kong">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Page -->
+        <section id="location-page" class="page-content">
+            <div class="container py-5">
+                <h1 class="text-center mb-5 lang-en">Our Location</h1>
+                <h1 class="text-center mb-5 lang-zh">我們的位置</h1>
+                
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="map-container mb-5">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.856232803246!2d114.1557493153932!3d22.28223934920014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040064b5c7d36d%3A0x68ddf3664dfef887!2sCentral%2C%20Hong%20Kong!5e0!3m2!1sen!2shk!4v1647856782344!5m2!1sen!2shk" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                title="Our location in Central, Hong Kong">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="lang-en">Global Business Solutions</h3>
+                    <h3 class="lang-zh">全球商業解決方案</h3>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4 class="lang-en">Quick Links</h4>
+                    <h4 class="lang-zh">快速連結</h4>
+                    <ul class="list-unstyled">
+                        <li><a class="text-light text-decoration-none menu-item" data-page="home"><span class="lang-en">Home</span><span class="lang-zh">主頁</span></a></li>
+                        <li><a class="text-light text-decoration-none menu-item" data-page="about"><span class="lang-en">About</span><span class="lang-zh">關於我們</span></a></li>
+                        <li><a class="text-light text-decoration-none menu-item" data-page="contact"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4 class="lang-en">Contact Info</h4>
+                    <h4 class="lang-zh">聯絡資訊</h4>
+                    <address class="text-light">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <span class="lang-en">Central District, Hong Kong</span>
+                        <span class="lang-zh">香港中環</span>
+                        <br>
+                        <i class="fas fa-phone me-2"></i>+852 5112 1555
+                        <br>
+                        <i class="fas fa-envelope me-2"></i>angus0705@hotmail.com
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu functionality
+            const menuToggle = document.getElementById('menuToggle');
+            const closeMenu = document.getElementById('closeMenu');
+            const sideMenu = document.getElementById('sideMenu');
+            const menuOverlay = document.getElementById('menuOverlay');
+            
+            function openMenu() {
+                sideMenu.classList.add('open');
+                menuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeSideMenu() {
+                sideMenu.classList.remove('open');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            menuToggle.addEventListener('click', openMenu);
+            closeMenu.addEventListener('click', closeSideMenu);
+            menuOverlay.addEventListener('click', closeSideMenu);
+            
+            // Page navigation functionality
+            const menuItems = document.querySelectorAll('.menu-item[data-page]');
+            const pageContents = document.querySelectorAll('.page-content');
+            
+            function showPage(pageId) {
+                // Hide all pages
+                pageContents.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show selected page
+                const targetPage = document.getElementById(`${pageId}-page`);
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                    
+                    // Scroll to top
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close menu on mobile
+                if (window.innerWidth < 992) {
+                    closeSideMenu();
+                }
+            }
+            
+            // Add click event to all menu items
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+            
+            // Language switching functionality
+            const languageOptions = document.querySelectorAll('.language-option');
+            
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    document.body.setAttribute('lang', selectedLang);
+                    
+                    // Update language selector button text
+                    const langButton = document.getElementById('languageDropdown');
+                    const buttonText = langButton.querySelector('span');
+                    
+                    if (selectedLang === 'en') {
+                        buttonText.textContent = 'English';
+                    } else {
+                        buttonText.textContent = '繁體中文';
+                    }
+                    
+                    // Close dropdown
+                    const dropdown = bootstrap.Dropdown.getInstance(langButton);
+                    dropdown.hide();
+                });
+            });
+            
+            // Initialize with home page
+            showPage('home');
+            
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeSideMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
