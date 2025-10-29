@@ -265,7 +265,7 @@
     <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="container mt-3">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/" data-translate="nav_home" data-page="home">Home</a></li>
+            <li class="breadcrumb-item"><a href="/" data-translate="nav_home">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page" data-translate="breadcrumb_current">Professional Digital Solutions</li>
         </ol>
     </nav>
@@ -1092,30 +1092,19 @@
             }
 
             // Navigation click handlers
-            function attachNavigationHandlers() {
-                document.querySelectorAll('a[href^="/"]').forEach(link => {
-                    // Remove existing listeners to avoid duplicates
-                    link.removeEventListener('click', navigationClickHandler);
-                    link.addEventListener('click', navigationClickHandler);
-                });
-            }
-
-            function navigationClickHandler(e) {
-                e.preventDefault();
-                const path = this.getAttribute('href');
-                showPage(path);
-                
-                // Update active nav link (only for main navigation)
-                if (this.classList.contains('nav-link')) {
+            document.querySelectorAll('a[href^="/"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const path = this.getAttribute('href');
+                    showPage(path);
+                    
+                    // Update active nav link
                     document.querySelectorAll('.nav-link').forEach(navLink => {
                         navLink.classList.remove('active');
                     });
                     this.classList.add('active');
-                }
-            }
-
-            // Initial attachment of handlers
-            attachNavigationHandlers();
+                });
+            });
 
             // Show specific page
             function showPage(path) {
@@ -1167,14 +1156,11 @@
                 };
 
                 let breadcrumbHTML = `
-                    <li class="breadcrumb-item"><a href="/" data-translate="nav_home" data-page="home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/" data-translate="nav_home">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">${pathNames[path] || 'Professional Digital Solutions'}</li>
                 `;
                 
                 breadcrumb.innerHTML = breadcrumbHTML;
-                
-                // Reattach event handlers to the new breadcrumb links
-                attachNavigationHandlers();
                 
                 // Update translations for breadcrumb
                 updatePageLanguage(languageSelect.value);

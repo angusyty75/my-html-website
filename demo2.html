@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Business Solutions - Professional Services in Hong Kong</title>
+    <title>Digital Business Solution - Professional Services in Hong Kong</title>
     <meta name="description" content="Professional business solutions, web development, and consulting services in Hong Kong. WhatsApp: 51121555">
     <meta name="keywords" content="Hong Kong business, web development, consulting, digital solutions, professional services, WhatsApp 51121555">
-    <meta name="author" content="Global Business Solutions">
+    <meta name="author" content="Digital Business Solution">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Global Business Solutions - Professional Services in Hong Kong">
+    <meta property="og:title" content="Digital Business Solution - Professional Services in Hong Kong">
     <meta property="og:description" content="Expert business solutions with WhatsApp contact: 51121555">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.globalbusinesssolutions.hk">
@@ -23,7 +23,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Global Business Solutions",
+        "name": "Digital Business Solution",
         "url": "https://www.globalbusinesssolutions.hk",
         "logo": "https://www.globalbusinesssolutions.hk/logo.png",
         "description": "Professional business solutions and consulting services in Hong Kong",
@@ -189,11 +189,25 @@
             background: rgba(0,0,0,0.05);
         }
         
-        .lang-en { display: block; }
-        .lang-zh { display: none; }
+        /* FIXED: Language display implementation */
+        .lang-en, .lang-zh {
+            display: inline;
+        }
         
-        body:lang(zh) .lang-en { display: none; }
-        body:lang(zh) .lang-zh { display: block; }
+        body:lang(en) .lang-zh,
+        body:lang(zh) .lang-en {
+            display: none !important;
+        }
+        
+        /* Ensure proper display for block elements */
+        .lang-block-en, .lang-block-zh {
+            display: block;
+        }
+        
+        body:lang(en) .lang-block-zh,
+        body:lang(zh) .lang-block-en {
+            display: none !important;
+        }
         
         /* Page Content Styles */
         .page-content {
@@ -357,11 +371,26 @@
             :root {
                 --sidebar-width: 280px;
             }
+            
+            /* FIXED: Mobile-specific language fixes */
+            .language-selector .dropdown-menu {
+                min-width: 120px;
+            }
+            
+            .menu-item span {
+                font-size: 14px;
+            }
         }
         
         @media (max-width: 480px) {
             :root {
                 --sidebar-width: 100%;
+            }
+            
+            /* FIXED: Ensure language options are visible on small screens */
+            .language-option {
+                padding: 8px 12px;
+                font-size: 14px;
             }
         }
     </style>
@@ -375,9 +404,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="#home" aria-label="Global Business Solutions - Home">
+            <a class="navbar-brand" href="#home" aria-label="Digital Business Solution - Home">
                 <i class="fas fa-globe-asia me-2"></i>
-                <span class="lang-en">Global Business Solutions</span>
+                <span class="lang-en">Digital Business Solution</span>
                 <span class="lang-zh">全球商業解決方案</span>
             </a>
             
@@ -533,9 +562,9 @@
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp: 5112 1555</span>
                 </a>
-                <a href="mailto:angus0705@hotmail.com" class="menu-item">
+                <a href="mailto:angusyty175@gmail.com" class="menu-item">
                     <i class="fas fa-envelope"></i>
-                    <span>angus0705@hotmail.com</span>
+                    <span>angusyty175@gmail.com</span>
                 </a>
                 <a class="menu-item" data-page="location">
                     <i class="fas fa-map-marker-alt"></i>
@@ -557,10 +586,10 @@
                     <a href="https://wa.me/85251121555" class="social-icon" target="_blank" aria-label="Contact us on WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://facebook.com" class="social-icon" target="_blank" aria-label="Follow us on Facebook">
+                    <a href="https://www.facebook.com/angus.yu.505/" class="social-icon" target="_blank" aria-label="Follow us on Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="mailto:angus0705@hotmail.com" class="social-icon" aria-label="Email us">
+                    <a href="mailto:angusyty175@gmail.com" class="social-icon" aria-label="Email us">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -578,13 +607,13 @@
             <!-- Hero Section -->
             <section id="home" class="hero-section text-center">
                 <div class="container position-relative">
-                    <h1 class="display-4 fw-bold mb-4 lang-en">Professional Business Solutions</h1>
-                    <h1 class="display-4 fw-bold mb-4 lang-zh">專業商業解決方案</h1>
+                    <h1 class="display-4 fw-bold mb-4 lang-block-en">Professional Business Solutions</h1>
+                    <h1 class="display-4 fw-bold mb-4 lang-block-zh">專業商業解決方案</h1>
                     
-                    <p class="lead mb-4 lang-en">
+                    <p class="lead mb-4 lang-block-en">
                         We provide expert business consulting, web development, and digital solutions to help your company grow in Hong Kong and beyond.
                     </p>
-                    <p class="lead mb-4 lang-zh">
+                    <p class="lead mb-4 lang-block-zh">
                         我們提供專業的商業諮詢、網站開發和數字化解決方案，幫助您的公司在香港及全球範圍內發展。
                     </p>
                     
@@ -604,16 +633,16 @@
             <!-- About Preview Section -->
             <section id="about-preview" class="py-5">
                 <div class="container">
-                    <h2 class="text-center section-title lang-en">About Us</h2>
-                    <h2 class="text-center section-title lang-zh">關於我們</h2>
+                    <h2 class="text-center section-title lang-block-en">About Us</h2>
+                    <h2 class="text-center section-title lang-block-zh">關於我們</h2>
                     
                     <div class="row align-items-center">
                         <div class="col-lg-6 mb-4">
-                            <p class="lang-en">
-                                With over 10 years of experience in the industry, Global Business Solutions has been helping companies 
+                            <p class="lang-block-en">
+                                With over 10 years of experience in the industry, Digital Business Solution has been helping companies 
                                 navigate the digital landscape and achieve their business goals.
                             </p>
-                            <p class="lang-zh">
+                            <p class="lang-block-zh">
                                 憑藉在行業內超過10年的經驗，全球商業解決方案一直幫助公司應對數字化環境並實現其業務目標。
                             </p>
                             <a class="btn btn-primary menu-item" data-page="about">
@@ -647,8 +676,8 @@
             <!-- Services Preview Section -->
             <section id="services-preview" class="py-5 bg-light">
                 <div class="container">
-                    <h2 class="text-center section-title lang-en">Our Services</h2>
-                    <h2 class="text-center section-title lang-zh">我們的服務</h2>
+                    <h2 class="text-center section-title lang-block-en">Our Services</h2>
+                    <h2 class="text-center section-title lang-block-zh">我們的服務</h2>
                     
                     <div class="row g-4">
                         <div class="col-md-6 col-lg-3">
@@ -716,18 +745,18 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h1 class="text-center mb-5 lang-en">About Global Business Solutions</h1>
-                        <h1 class="text-center mb-5 lang-zh">關於全球商業解決方案</h1>
+                        <h1 class="text-center mb-5 lang-block-en">About Digital Business Solution</h1>
+                        <h1 class="text-center mb-5 lang-block-zh">關於全球商業解決方案</h1>
                         
                         <div class="mb-5">
-                            <h3 class="lang-en">Our Story</h3>
-                            <h3 class="lang-zh">我們的故事</h3>
-                            <p class="lang-en">
-                                Founded in 2013, Global Business Solutions began as a small web development agency in Hong Kong. 
+                            <h3 class="lang-block-en">Our Story</h3>
+                            <h3 class="lang-block-zh">我們的故事</h3>
+                            <p class="lang-block-en">
+                                Founded in 2013, Digital Business Solution began as a small web development agency in Hong Kong. 
                                 Over the years, we've expanded our services to include comprehensive digital solutions, business 
                                 consulting, and marketing strategies tailored for the unique Hong Kong market.
                             </p>
-                            <p class="lang-zh">
+                            <p class="lang-block-zh">
                                 全球商業解決方案成立於2013年，最初是香港一家小型網站開發機構。
                                 多年來，我們擴展了服務範圍，包括全面的數字解決方案、商業諮詢和針對香港獨特市場量身定制的營銷策略。
                             </p>
@@ -740,15 +769,15 @@
         <!-- Services Page -->
         <section id="services-page" class="page-content">
             <div class="container py-5">
-                <h1 class="text-center mb-5 lang-en">Our Services</h1>
-                <h1 class="text-center mb-5 lang-zh">我們的服務</h1>
+                <h1 class="text-center mb-5 lang-block-en">Our Services</h1>
+                <h1 class="text-center mb-5 lang-block-zh">我們的服務</h1>
                 
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
-                        <p class="lead text-center mb-5 lang-en">
+                        <p class="lead text-center mb-5 lang-block-en">
                             We offer a comprehensive range of digital services to help your business thrive in the modern marketplace.
                         </p>
-                        <p class="lead text-center mb-5 lang-zh">
+                        <p class="lead text-center mb-5 lang-block-zh">
                             我們提供全面的數字服務，幫助您的企業在現代市場中蓬勃發展。
                         </p>
                         
@@ -759,10 +788,10 @@
                                         <i class="fas fa-laptop-code feature-icon"></i>
                                         <h4 class="card-title lang-en">Web Development</h4>
                                         <h4 class="card-title lang-zh">網站開發</h4>
-                                        <p class="card-text lang-en">
+                                        <p class="card-text lang-block-en">
                                             Custom website and web application development using the latest technologies.
                                         </p>
-                                        <p class="card-text lang-zh">
+                                        <p class="card-text lang-block-zh">
                                             使用最新技術定制網站和Web應用程序開發。
                                         </p>
                                     </div>
@@ -775,10 +804,10 @@
                                         <i class="fas fa-briefcase feature-icon"></i>
                                         <h4 class="card-title lang-en">Business Consulting</h4>
                                         <h4 class="card-title lang-zh">商業諮詢</h4>
-                                        <p class="card-text lang-en">
+                                        <p class="card-text lang-block-en">
                                             Strategic business consulting to help you optimize operations and identify growth opportunities.
                                         </p>
-                                        <p class="card-text lang-zh">
+                                        <p class="card-text lang-block-zh">
                                             戰略商業諮詢，幫助您優化運營，識別增長機會。
                                         </p>
                                     </div>
@@ -791,10 +820,10 @@
                                         <i class="fas fa-chart-line feature-icon"></i>
                                         <h4 class="card-title lang-en">Digital Marketing</h4>
                                         <h4 class="card-title lang-zh">數字營銷</h4>
-                                        <p class="card-text lang-en">
+                                        <p class="card-text lang-block-en">
                                             Comprehensive digital marketing strategies to increase your brand visibility.
                                         </p>
-                                        <p class="card-text lang-zh">
+                                        <p class="card-text lang-block-zh">
                                             全面的數字營銷策略，以提高您的品牌知名度。
                                         </p>
                                     </div>
@@ -807,10 +836,10 @@
                                         <i class="fas fa-search feature-icon"></i>
                                         <h4 class="card-title lang-en">SEO Optimization</h4>
                                         <h4 class="card-title lang-zh">SEO優化</h4>
-                                        <p class="card-text lang-en">
+                                        <p class="card-text lang-block-en">
                                             Search engine optimization services to improve your website's visibility in search results.
                                         </p>
-                                        <p class="card-text lang-zh">
+                                        <p class="card-text lang-block-zh">
                                             搜索引擎優化服務，以提高您的網站在搜索結果中的可見度。
                                         </p>
                                     </div>
@@ -827,21 +856,21 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h1 class="text-center mb-4 lang-en">Web Development Services</h1>
-                        <h1 class="text-center mb-4 lang-zh">網站開發服務</h1>
+                        <h1 class="text-center mb-4 lang-block-en">Web Development Services</h1>
+                        <h1 class="text-center mb-4 lang-block-zh">網站開發服務</h1>
                         
                         <div class="text-center mb-5">
                             <i class="fas fa-laptop-code feature-icon"></i>
                         </div>
                         
                         <div class="mb-5">
-                            <h3 class="lang-en">Custom Web Development</h3>
-                            <h3 class="lang-zh">定制網站開發</h3>
-                            <p class="lang-en">
+                            <h3 class="lang-block-en">Custom Web Development</h3>
+                            <h3 class="lang-block-zh">定制網站開發</h3>
+                            <p class="lang-block-en">
                                 We create bespoke websites and web applications tailored to your specific business needs. 
                                 Our development process focuses on performance, security, and user experience.
                             </p>
-                            <p class="lang-zh">
+                            <p class="lang-block-zh">
                                 我們根據您的具體業務需求創建定制的網站和Web應用程序。
                                 我們的開發過程側重於性能、安全性和用戶體驗。
                             </p>
@@ -856,21 +885,21 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h1 class="text-center mb-4 lang-en">Business Consulting</h1>
-                        <h1 class="text-center mb-4 lang-zh">商業諮詢</h1>
+                        <h1 class="text-center mb-4 lang-block-en">Business Consulting</h1>
+                        <h1 class="text-center mb-4 lang-block-zh">商業諮詢</h1>
                         
                         <div class="text-center mb-5">
                             <i class="fas fa-briefcase feature-icon"></i>
                         </div>
                         
                         <div class="mb-5">
-                            <h3 class="lang-en">Strategic Business Advice</h3>
-                            <h3 class="lang-zh">戰略商業建議</h3>
-                            <p class="lang-en">
+                            <h3 class="lang-block-en">Strategic Business Advice</h3>
+                            <h3 class="lang-block-zh">戰略商業建議</h3>
+                            <p class="lang-block-en">
                                 Our consulting services help businesses navigate challenges and identify opportunities for growth. 
                                 We provide actionable insights and strategies tailored to your specific industry and market position.
                             </p>
-                            <p class="lang-zh">
+                            <p class="lang-block-zh">
                                 我們的諮詢服務幫助企業應對挑戰並識別增長機會。
                                 我們提供針對您的特定行業和市場地位量身定制的可行見解和策略。
                             </p>
@@ -885,21 +914,21 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h1 class="text-center mb-4 lang-en">Digital Marketing</h1>
-                        <h1 class="text-center mb-4 lang-zh">數字營銷</h1>
+                        <h1 class="text-center mb-4 lang-block-en">Digital Marketing</h1>
+                        <h1 class="text-center mb-4 lang-block-zh">數字營銷</h1>
                         
                         <div class="text-center mb-5">
                             <i class="fas fa-chart-line feature-icon"></i>
                         </div>
                         
                         <div class="mb-5">
-                            <h3 class="lang-en">Comprehensive Digital Strategies</h3>
-                            <h3 class="lang-zh">全面的數字策略</h3>
-                            <p class="lang-en">
+                            <h3 class="lang-block-en">Comprehensive Digital Strategies</h3>
+                            <h3 class="lang-block-zh">全面的數字策略</h3>
+                            <p class="lang-block-en">
                                 We develop and execute digital marketing campaigns that drive results. Our data-driven approach 
                                 ensures your marketing efforts deliver maximum ROI and business growth.
                             </p>
-                            <p class="lang-zh">
+                            <p class="lang-block-zh">
                                 我們制定並執行推動結果的數字營銷活動。我們的數據驅動方法確保您的營銷努力帶來最大的投資回報率和業務增長。
                             </p>
                         </div>
@@ -913,21 +942,21 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h1 class="text-center mb-4 lang-en">SEO Optimization</h1>
-                        <h1 class="text-center mb-4 lang-zh">SEO優化</h1>
+                        <h1 class="text-center mb-4 lang-block-en">SEO Optimization</h1>
+                        <h1 class="text-center mb-4 lang-block-zh">SEO優化</h1>
                         
                         <div class="text-center mb-5">
                             <i class="fas fa-search feature-icon"></i>
                         </div>
                         
                         <div class="mb-5">
-                            <h3 class="lang-en">Improve Your Search Visibility</h3>
-                            <h3 class="lang-zh">提高您的搜索可見度</h3>
-                            <p class="lang-en">
+                            <h3 class="lang-block-en">Improve Your Search Visibility</h3>
+                            <h3 class="lang-block-zh">提高您的搜索可見度</h3>
+                            <p class="lang-block-en">
                                 Our SEO services help your website rank higher in search engine results, driving more organic traffic 
                                 and qualified leads to your business. We use white-hat SEO techniques that deliver sustainable results.
                             </p>
-                            <p class="lang-zh">
+                            <p class="lang-block-zh">
                                 我們的SEO服務幫助您的網站在搜索引擎結果中獲得更高排名，為您的業務帶來更多自然流量和合格潛在客戶。
                                 我們使用白帽SEO技術，提供可持續的結果。
                             </p>
@@ -942,17 +971,17 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h1 class="text-center mb-5 lang-en">Our History</h1>
-                        <h1 class="text-center mb-5 lang-zh">我們的歷史</h1>
+                        <h1 class="text-center mb-5 lang-block-en">Our History</h1>
+                        <h1 class="text-center mb-5 lang-block-zh">我們的歷史</h1>
                         
                         <div class="mb-5">
-                            <h3 class="lang-en">2013 - Foundation</h3>
-                            <h3 class="lang-zh">2013年 - 成立</h3>
-                            <p class="lang-en">
-                                Global Business Solutions was founded in Hong Kong with a focus on web development 
+                            <h3 class="lang-block-en">2013 - Foundation</h3>
+                            <h3 class="lang-block-zh">2013年 - 成立</h3>
+                            <p class="lang-block-en">
+                                Digital Business Solution was founded in Hong Kong with a focus on web development 
                                 for small and medium-sized businesses.
                             </p>
-                            <p class="lang-zh">
+                            <p class="lang-block-zh">
                                 全球商業解決方案在香港成立，專注於中小型企業的網站開發。
                             </p>
                         </div>
@@ -964,15 +993,15 @@
         <!-- Portfolio Page -->
         <section id="portfolio-page" class="page-content">
             <div class="container py-5">
-                <h1 class="text-center mb-5 lang-en">Our Portfolio</h1>
-                <h1 class="text-center mb-5 lang-zh">我們的作品集</h1>
+                <h1 class="text-center mb-5 lang-block-en">Our Portfolio</h1>
+                <h1 class="text-center mb-5 lang-block-zh">我們的作品集</h1>
                 
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
-                        <p class="lead text-center mb-5 lang-en">
+                        <p class="lead text-center mb-5 lang-block-en">
                             Explore some of our recent projects and success stories
                         </p>
-                        <p class="lead text-center mb-5 lang-zh">
+                        <p class="lead text-center mb-5 lang-block-zh">
                             探索我們最近的一些項目和成功案例
                         </p>
                         
@@ -982,10 +1011,10 @@
                                     <div class="card-body">
                                         <h4 class="card-title lang-en">E-commerce Platform</h4>
                                         <h4 class="card-title lang-zh">電子商務平台</h4>
-                                        <p class="card-text lang-en">
+                                        <p class="card-text lang-block-en">
                                             Developed a custom e-commerce solution for a retail client.
                                         </p>
-                                        <p class="card-text lang-zh">
+                                        <p class="card-text lang-block-zh">
                                             為零售客戶開發定制的電子商務解決方案。
                                         </p>
                                     </div>
@@ -997,10 +1026,10 @@
                                     <div class="card-body">
                                         <h4 class="card-title lang-en">Corporate Website</h4>
                                         <h4 class="card-title lang-zh">企業網站</h4>
-                                        <p class="card-text lang-en">
+                                        <p class="card-text lang-block-en">
                                             Redesigned and developed a corporate website for a financial services company.
                                         </p>
-                                        <p class="card-text lang-zh">
+                                        <p class="card-text lang-block-zh">
                                             為金融服務公司重新設計和開發企業網站。
                                         </p>
                                     </div>
@@ -1015,16 +1044,16 @@
         <!-- Blog Page -->
         <section id="blog-page" class="page-content">
             <div class="container py-5">
-                <h1 class="text-center mb-5 lang-en">Blog Highlights</h1>
-                <h1 class="text-center mb-5 lang-zh">博客精選</h1>
+                <h1 class="text-center mb-5 lang-block-en">Blog Highlights</h1>
+                <h1 class="text-center mb-5 lang-block-zh">博客精選</h1>
                 
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="text-center mb-5">
-                            <p class="lead lang-en">
+                            <p class="lead lang-block-en">
                                 Visit our blog for the latest insights on digital business, technology, and marketing trends.
                             </p>
-                            <p class="lead lang-zh">
+                            <p class="lead lang-block-zh">
                                 訪問我們的博客，了解有關數字業務、技術和營銷趨勢的最新見解。
                             </p>
                             <a href="https://angusyu.blogspot.com" class="btn btn-primary btn-lg" target="_blank">
@@ -1041,8 +1070,8 @@
         <!-- Contact Page -->
         <section id="contact-page" class="page-content">
             <div class="container py-5">
-                <h1 class="text-center section-title lang-en">Contact Us</h1>
-                <h1 class="text-center section-title lang-zh">聯絡我們</h1>
+                <h1 class="text-center section-title lang-block-en">Contact Us</h1>
+                <h1 class="text-center section-title lang-block-zh">聯絡我們</h1>
                 
                 <div class="row">
                     <div class="col-lg-6 mb-4">
@@ -1055,7 +1084,7 @@
                                     <h5 class="lang-en">Contact Information</h5>
                                     <h5 class="lang-zh">聯絡資訊</h5>
                                     <p><i class="fas fa-phone me-2"></i> +852 5112 1555</p>
-                                    <p><i class="fas fa-envelope me-2"></i> angus0705@hotmail.com</p>
+                                    <p><i class="fas fa-envelope me-2"></i> angusyty175@gmail.com</p>
                                     <p><i class="fas fa-map-marker-alt me-2"></i> Central District, Hong Kong</p>
                                 </div>
                                 
@@ -1067,7 +1096,7 @@
                                             <i class="fab fa-whatsapp me-2"></i>
                                             <span>WhatsApp: 5112 1555</span>
                                         </a>
-                                        <a href="mailto:angus0705@hotmail.com" class="contact-badge">
+                                        <a href="mailto:angusyty175@gmail.com" class="contact-badge">
                                             <i class="fas fa-envelope me-2"></i>
                                             <span class="lang-en">Email Us</span>
                                             <span class="lang-zh">電郵我們</span>
@@ -1106,8 +1135,8 @@
         <!-- Location Page -->
         <section id="location-page" class="page-content">
             <div class="container py-5">
-                <h1 class="text-center mb-5 lang-en">Our Location</h1>
-                <h1 class="text-center mb-5 lang-zh">我們的位置</h1>
+                <h1 class="text-center mb-5 lang-block-en">Our Location</h1>
+                <h1 class="text-center mb-5 lang-block-zh">我們的位置</h1>
                 
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
@@ -1133,7 +1162,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h3 class="lang-en">Global Business Solutions</h3>
+                    <h3 class="lang-en">Digital Business Solution</h3>
                     <h3 class="lang-zh">全球商業解決方案</h3>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -1155,7 +1184,7 @@
                         <br>
                         <i class="fas fa-phone me-2"></i>+852 5112 1555
                         <br>
-                        <i class="fas fa-envelope me-2"></i>angus0705@hotmail.com
+                        <i class="fas fa-envelope me-2"></i>angusyty175@gmail.com
                     </address>
                 </div>
             </div>
