@@ -208,10 +208,10 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" role="navigation" aria-label="Main navigation">
         <div class="container">
             <!-- Logo with proper heading structure -->
-            <a class="navbar-brand" href="/" aria-label="Digital Business Solution - Home" itemprop="url">
+            <span class="navbar-brand" aria-label="Digital Business Solution - Home" itemprop="name">
                 <i class="fas fa-rocket me-2" aria-hidden="true"></i>
-                <span data-translate="company_name" itemprop="name">Digital Business Solution</span>
-            </a>
+                <span data-translate="company_name">Digital Business Solution</span>
+            </span>
             
             <!-- Language Switcher -->
             <div class="language-switcher">
@@ -231,31 +231,31 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/" aria-current="page" data-translate="nav_home" data-page="home">Home</a>
+                        <a class="nav-link active" href="#" aria-current="page" data-translate="nav_home" data-page="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about" data-translate="nav_about" data-page="about">About</a>
+                        <a class="nav-link" href="#" data-translate="nav_about" data-page="about">About</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/services" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav_services">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav_services" data-page="services">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="/services/web-development" data-translate="nav_web_dev" data-page="web-development">Web Development</a></li>
-                            <li><a class="dropdown-item" href="/services/web-design" data-translate="nav_web_design" data-page="web-design">Web Design</a></li>
-                            <li><a class="dropdown-item" href="/services/consulting" data-translate="nav_consulting" data-page="consulting">Consulting</a></li>
+                            <li><a class="dropdown-item" href="#" data-translate="nav_web_dev" data-page="web-development">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#" data-translate="nav_web_design" data-page="web-design">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#" data-translate="nav_consulting" data-page="consulting">Consulting</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/services/all-services" data-translate="nav_all_services" data-page="all-services">All Services</a></li>
+                            <li><a class="dropdown-item" href="#" data-translate="nav_all_services" data-page="all-services">All Services</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/portfolio" data-translate="nav_portfolio" data-page="portfolio">Portfolio</a></li>
+                        <a class="nav-link" href="#" data-translate="nav_portfolio" data-page="portfolio">Portfolio</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/blog" data-translate="nav_blog" data-page="blog">Blog</a>
+                        <a class="nav-link" href="#" data-translate="nav_blog" data-page="blog">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact" data-translate="nav_contact" data-page="contact">Contact</a>
+                        <a class="nav-link" href="#" data-translate="nav_contact" data-page="contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -265,7 +265,7 @@
     <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb" class="container mt-3">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/" data-translate="nav_home">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" data-page="home" data-translate="nav_home">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page" data-translate="breadcrumb_current">Professional Digital Solutions</li>
         </ol>
     </nav>
@@ -1092,17 +1092,28 @@
             }
 
             // Navigation click handlers
-            document.querySelectorAll('a[href^="/"]').forEach(link => {
+            document.querySelectorAll('a[data-page]').forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const path = this.getAttribute('href');
+                    const page = this.getAttribute('data-page');
+                    const path = '/' + (page === 'home' ? '' : page);
                     showPage(path);
                     
                     // Update active nav link
                     document.querySelectorAll('.nav-link').forEach(navLink => {
                         navLink.classList.remove('active');
                     });
-                    this.classList.add('active');
+                    
+                    // If this is a nav-link, make it active
+                    if (this.classList.contains('nav-link') || this.classList.contains('dropdown-item')) {
+                        // Find the corresponding nav-link for this page
+                        const correspondingNavLink = document.querySelector(`.nav-link[data-page="${page}"]`);
+                        if (correspondingNavLink) {
+                            correspondingNavLink.classList.add('active');
+                        } else if (this.classList.contains('nav-link')) {
+                            this.classList.add('active');
+                        }
+                    }
                 });
             });
 
@@ -1156,7 +1167,7 @@
                 };
 
                 let breadcrumbHTML = `
-                    <li class="breadcrumb-item"><a href="/" data-translate="nav_home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" data-page="home" data-translate="nav_home">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">${pathNames[path] || 'Professional Digital Solutions'}</li>
                 `;
                 
