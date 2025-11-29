@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "zh-HK": "現代簡約沙發",
+            "zh-CN": "现代简约沙发",
+            "en": "Modern Minimalist Sofa"
+        },
+        "price": 5800,
+        "image": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=958&q=80"
+        ],
+        "description": {
+            "zh-HK": "採用高品質布料，舒適耐用，適合現代家居風格。",
+            "zh-CN": "采用高品质布料，舒适耐用，适合现代家居风格。",
+            "en": "Made with high-quality fabric, comfortable and durable, suitable for modern home style."
+        },
+        "category": "沙發"
+    },
+    {
+        "id": 2,
+       
+	"name": {
+            "zh-HK": "實木餐桌套裝",
+            "zh-CN": "实木餐桌套装",
+            "en": "Solid wood dining table set"
+        },
+        "price": 4200,
+        "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        ],
+        "description": {
+            "zh-HK": "精選實木材料，堅固耐用，搭配舒適餐椅。",
+            "zh-CN": "精选实木材料，坚固耐用，搭配舒适餐椅。",
+            "en": "Made from carefully selected solid wood, this product is sturdy and durable, and comes with comfortable dining chairs."
+        },
+        "category": "餐桌椅"
+    },
+    {
+        "id": 3,
+        "name": {
+            "zh-HK": "豪華雙人床",
+            "zh-CN": "豪华双人床",
+            "en": "Luxury double bed"
+        },
+        "price": 6800,
+        "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=958&q=80"
+        ],
+        "description": {
+            "zh-HK": "優質床架設計，提供完美支撐，提升睡眠品質。",
+            "zh-CN": "优质床架设计，提供完美支撑，提升睡眠品质。",
+            "en": "The high-quality bed frame design provides perfect support and improves sleep quality."
+        },
+        "category": "床組"
+    },
+    {
+        "id": 4,
+	"name": {
+            "zh-HK": "辦公傢具",
+            "zh-CN": "办公家具",
+            "en": "office furniture"
+        },
+        "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+	"description": {
+            "zh-HK": "專業辦公傢具",
+            "zh-CN": "专业办公家具",
+            "en": "Professional office furniture"
+        }
+
+    }
+]

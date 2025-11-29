@@ -1,0 +1,131 @@
+{
+    "zh-HK": {
+        "companyName": "香港優質傢俬",
+        "nav": {
+            "home": "首頁",
+            "products": "產品",
+            "categories": "分類",
+            "about": "關於我們",
+            "contact": "聯絡我們"
+        },
+        "hero": {
+            "title": "打造理想家居",
+            "subtitle": "精選高品質傢具，為您創造舒適生活空間",
+            "cta": "瀏覽產品"
+        },
+        "categories": {
+            "title": "產品分類"
+        },
+        "products": {
+            "title": "精選產品"
+        },
+        "about": {
+            "title": "關於香港優質傢俬",
+            "description": "我們是香港領先的傢具供應商，擁有超過20年經驗。我們致力於為客戶提供高品質、耐用且設計精美的傢具。所有產品均經過嚴格質量控制，確保符合香港家居環境需求。",
+            "mission": "我們的使命是幫助客戶打造理想家居，提供專業建議和優質服務。",
+            "cta": "聯絡我們"
+        },
+        "footer": {
+            "contactTitle": "聯絡我們",
+            "address": "地址: 香港九龍觀塘道123號",
+            "phone": "電話: +852 1234 5678",
+            "email": "電郵: info@hkfurniture.com",
+            "hoursTitle": "營業時間",
+            "weekdays": "星期一至五: 10:00 - 20:00",
+            "weekends": "星期六日: 10:00 - 18:00",
+            "holidays": "公眾假期: 12:00 - 17:00",
+            "linksTitle": "快速連結",
+            "linkHome": "首頁",
+            "linkProducts": "產品",
+            "linkAbout": "關於我們",
+            "linkContact": "聯絡我們",
+            "copyright": "© 2023 香港優質傢俬 版權所有"
+        }
+    },
+    "zh-CN": {
+        "companyName": "香港优质家具",
+        "nav": {
+            "home": "首页",
+            "products": "产品",
+            "categories": "分类",
+            "about": "关于我们",
+            "contact": "联系我们"
+        },
+        "hero": {
+            "title": "打造理想家居",
+            "subtitle": "精选高品质家具，为您创造舒适生活空间",
+            "cta": "浏览产品"
+        },
+        "categories": {
+            "title": "产品分类"
+        },
+        "products": {
+            "title": "精选产品"
+        },
+        "about": {
+            "title": "关于香港优质家具",
+            "description": "我们是香港领先的家具供应商，拥有超过20年经验。我们致力于为客户提供高品质、耐用且设计精美的家具。所有产品均经过严格质量控制，确保符合香港家居环境需求。",
+            "mission": "我们的使命是帮助客户打造理想家居，提供专业建议和优质服务。",
+            "cta": "联系我们"
+        },
+        "footer": {
+            "contactTitle": "联系我们",
+            "address": "地址: 香港九龙观塘道123号",
+            "phone": "电话: +852 1234 5678",
+            "email": "邮箱: info@hkfurniture.com",
+            "hoursTitle": "营业时间",
+            "weekdays": "星期一至五: 10:00 - 20:00",
+            "weekends": "星期六日: 10:00 - 18:00",
+            "holidays": "公众假期: 12:00 - 17:00",
+            "linksTitle": "快速链接",
+            "linkHome": "首页",
+            "linkProducts": "产品",
+            "linkAbout": "关于我们",
+            "linkContact": "联系我们",
+            "copyright": "© 2023 香港优质家具 版权所有"
+        }
+    },
+    "en": {
+        "companyName": "Hong Kong Quality Furniture",
+        "nav": {
+            "home": "Home",
+            "products": "Products",
+            "categories": "Categories",
+            "about": "About Us",
+            "contact": "Contact"
+        },
+        "hero": {
+            "title": "Create Your Dream Home",
+            "subtitle": "Premium quality furniture to create your comfortable living space",
+            "cta": "Browse Products"
+        },
+        "categories": {
+            "title": "Product Categories"
+        },
+        "products": {
+            "title": "Featured Products"
+        },
+        "about": {
+            "title": "About Hong Kong Quality Furniture",
+            "description": "We are Hong Kong's leading furniture supplier with over 20 years of experience. We are committed to providing customers with high-quality, durable and beautifully designed furniture. All products undergo strict quality control to ensure they meet Hong Kong home environment requirements.",
+            "mission": "Our mission is to help customers create their ideal home by providing professional advice and quality service.",
+            "cta": "Contact Us"
+        },
+        "footer": {
+            "contactTitle": "Contact Us",
+            "address": "Address: 123 Kwun Tong Road, Kowloon, Hong Kong",
+            "phone": "Phone: +852 1234 5678",
+            "email": "Email: info@hkfurniture.com",
+            "hoursTitle": "Business Hours",
+            "weekdays": "Monday - Friday: 10:00 - 20:00",
+            "weekends": "Saturday - Sunday: 10:00 - 18:00",
+            "holidays": "Public Holidays: 12:00 - 17:00",
+            "linksTitle": "Quick Links",
+            "linkHome": "Home",
+            "linkProducts": "Products",
+            "linkAbout": "About Us",
+            "linkContact": "Contact",
+            "copyright": "© 2023 Hong Kong Quality Furniture. All Rights Reserved."
+        }
+    }
+}

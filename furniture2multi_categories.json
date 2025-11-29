@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "zh-HK": "沙發",
+            "zh-CN": "沙发",
+            "en": "Sofas"
+        },
+        "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=958&q=80",
+        "description": {
+            "zh-HK": "舒適沙發系列",
+            "zh-CN": "舒适沙发系列",
+            "en": "Comfortable Sofa Collection"
+        }
+    },
+    {
+        "id": 2,
+        "name": {
+            "zh-HK": "實木餐桌套裝",
+            "zh-CN": "实木餐桌套装",
+            "en": "Solid wood dining table set"
+        },
+        "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+	"description": {
+            "zh-HK": "餐桌椅",
+            "zh-CN": "餐桌椅",
+            "en": "Dining table and chairs"
+        }
+    },
+    {
+        "id": 3,
+	"name": {
+            "zh-HK": "豪華雙人床",
+            "zh-CN": "豪华双人床",
+            "en": "Luxury double bed"
+        },
+        "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+	"description": {
+            "zh-HK": "床組",
+            "zh-CN": "床组",
+            "en": "bed set"
+        }
+    },
+    {
+        "id": 4,
+        "name": {
+            "zh-HK": "人體工學辦公椅",
+            "zh-CN": "人体工学办公椅",
+            "en": "Ergonomic office chair"
+        },
+        "image": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+	"description": {
+            "zh-HK": "辦公傢具",
+            "zh-CN": "办公家具",
+            "en": "office furniture"
+        }
+    }
+    
+
+]
